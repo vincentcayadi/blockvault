@@ -9,7 +9,7 @@ const config = {
   title: 'BlockVault',
   tagline: '',
   url: 'https://vincent-cayadi.github.io',
-  baseUrl: '/',
+  baseUrl: '/blockvault/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
