@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+// import logo from './images/black-icontext.png'
+
+const children = "hello"
 
 const Navbar = () => {
     return (
@@ -24,6 +27,7 @@ const Navbar = () => {
                 <Link className="p-4" to='/dashboard'>Dashboard</Link>
                 <Link className="p-4" to='/upload'>Upload</Link>
                 <Link className="p-4" to='/history'>History</Link>
+                <Link className="p-4 rounded-full" to='/sign-in'>{children}</Link>                                
             </div>
         </nav>
         
