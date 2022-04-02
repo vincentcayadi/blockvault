@@ -26,8 +26,8 @@ const Navbar = () => {
             <div className="pr-8 md:block hidden">
                 <Link className="p-4" to='/dashboard'>Dashboard</Link>
                 <Link className="p-4" to='/upload'>Upload</Link>
-                <Link className="p-4" to='/history'>History</Link>
-                <Link className="p-4 rounded-full" to='/sign-in'>{children}</Link>                                
+                <Link className="p-4" to='/transactions'>Transactions</Link>
+                <button className="p-4 rounded-full" to='/sign-in'>{children}</button>                                
             </div>
         </nav>
         

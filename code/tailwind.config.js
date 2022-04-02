@@ -6,8 +6,9 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["Inter var", "sans-serif"],
-      serif: ["Georgia", "serif"],
+      'sans': ['Helvetica', 'Arial', 'sans-serif'],
+      'serif': ["Georgia", "serif"],
+      'mono': ["Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
     },
     container:{
       center: true,
