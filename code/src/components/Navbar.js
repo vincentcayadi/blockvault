@@ -1,80 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React from 'react'
+import {Link} from 'react-router-dom'
 
-function Navbar() {
-    const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
-
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
-
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    };
-
-    useEffect(() => {
-        showButton();
-    }, []);
-
-    window.addEventListener('resize', showButton);
-
+const Navbar = () => {
     return (
-    <>
-        <nav className='navbar'>
-        <div className='navbar-container'>
-            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRVL
-            <i class='fab fa-typo3' />
+        <nav className='flex justify-between items-center h-16 bg-whitetext-black
+        relative shadow-sm' role='navigation'>
+            <Link to='/' className='pl-8'>
+                BlockVault
             </Link>
-            <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+            <div className='px-4 cursor-pointer md:hidden'>
+                <svg className='w-6 h-6'
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor" 
+                strokeWidth={2}>
+                    <path strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
             </div>
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-                <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
-                </Link>
-            </li>
-            <li className='nav-item'>
-                <Link
-                to='/services'
-                className='nav-links'
-                onClick={closeMobileMenu}
-                >
-                Services
-                </Link>
-            </li>
-            <li className='nav-item'>
-                <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-                >
-                Products
-                </Link>
-            </li>
-
-            <li>
-                <Link
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-                >
-                Sign Up
-                </Link>
-            </li>
-            </ul>
-            {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
-        </div>
+            <div className="pr-8 md:block hidden">
+                <Link className="p-4" to='/dashboard'>Dashboard</Link>
+                <Link className="p-4" to='/upload'>Upload</Link>
+                <Link className="p-4" to='/history'>History</Link>
+            </div>
         </nav>
-    </>
-    );
+        
+    )
 }
 
-export default Navbar;
+export default Navbar
