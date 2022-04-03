@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import creditCard from "./creditcard.svg";
 
 export const Hero = () => {
@@ -14,9 +15,9 @@ export const Hero = () => {
                     Store your data securely on the decentralised Blockchain network
                     using Blockvault.
                 </p>
-                <button class="subpixel-antialiased px-4 py-2 font-semibold text-xl bg-blue-500 text-white rounded-md shadow-sm hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 ease-in-out delay-150 duration-300">
+                <Link class="subpixel-antialiased px-4 py-2 font-semibold text-xl bg-blue-500 text-white rounded-md shadow-sm hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 ease-in-out delay-150 duration-300" to="./pages/dashboard">
                     Enter App
-                </button>
+                </Link>
                 </div>
                 <div class="flex flex-2 flex-col items-center ig:items-start w-1/2">
                 <img
