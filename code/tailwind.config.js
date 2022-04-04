@@ -3,7 +3,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'left': "left",
+      }
+    },
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],
       'serif': ["Georgia", "serif"],
