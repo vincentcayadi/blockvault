@@ -1,7 +1,9 @@
 import * as React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
+import { Button } from '@mantine/core';
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+
 
 function App() {
   return (
@@ -29,10 +31,32 @@ function Dashboard() {
   return (
     <>  
       <Navbar />
-        <div>
-        <h1>Dashboard</h1>
-        <p>Little Shit</p>
+      <body>
+        <div className="flex bg-nord6 w-5/6 rounded-md p-2 m-auto my-8 space-x-4">
+          <div className="flex-auto border-2 rounded-md p-2">
+            <h1>
+              Hello
+            </h1>
+            <p  className="font-bold">
+              Files Uploaded
+            </p>
+          </div>
+          <div className="flex-auto border-2 rounded-md p-2">
+            <div className="border-2">
+              Insert the transaction thingy here
+            </div>
+            <div>
+              Insert Gas Price Here:
+            </div>
+          </div>
         </div>
+        <div>
+          Hello
+        </div>
+        <div> 
+          Wassa
+        </div>
+      </body>
     </>
   );
 }
