@@ -1,6 +1,7 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
-const NotFoundPage = () => {
+const Upload = () => {
   return (
     <>
       <Navbar />
@@ -12,4 +13,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default Upload;

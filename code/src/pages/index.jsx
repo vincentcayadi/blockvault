@@ -1,12 +1,12 @@
 import React from "react";
+import Hero from "./components/Hero";
 
-const MainPage = () => {
-    return (
-        <div>
-        <h3>Hello Mother fucker</h3>
-        <p>Page not found.</p>
-        </div>
-    );
+const Home = () => {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
-export default MainPage;
+export default Home;
