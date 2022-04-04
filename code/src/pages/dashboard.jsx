@@ -1,12 +1,14 @@
 import React from "react";
 
-const MainPage = () => {
+const Dashboard = () => {
     return (
+    <>
         <div>
         <h3>Hello Mother fucker</h3>
         <p>Page not found.</p>
         </div>
+    </>
     );
 };
 
-export default MainPage;
+export default Dashboard;

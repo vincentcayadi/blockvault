@@ -19,7 +19,7 @@ export const Hero = () => {
                     Enter App
                 </Link>
                 </div>
-                <div class="flex flex-2 flex-col items-center ig:items-start w-1/2">
+                <div class="flex flex-2 flex-col items-center ig:items-start">
                 <img
                     src={creditCard}
                     alt="credit card"
