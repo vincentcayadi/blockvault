@@ -8,7 +8,7 @@ const children = "hello";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
-    <nav className="md:flex justify-between items-center bg-white sticky top-0 z-20">
+    <nav className="md:flex justify-between items-center bg-white sticky top-0 z-20 select-none">
       <div className="flex items-center justify-between">
         <Link to="/" className="pl-8">
           BlockVault

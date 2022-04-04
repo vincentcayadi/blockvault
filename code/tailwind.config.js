@@ -1,29 +1,31 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       transitionProperty: {
-        'left': "left",
-      }
+        left: "left",
+      },
     },
     fontFamily: {
-      'sans': ['Helvetica', 'Arial', 'sans-serif'],
-      'serif': ["Georgia", "serif"],
-      'mono': ["Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+      sans: ["Helvetica", "Arial", "sans-serif"],
+      serif: ["Georgia", "serif"],
+      mono: [
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "Liberation Mono",
+        "Courier New",
+        "monospace",
+      ],
     },
-    container:{
+    container: {
       center: true,
-      padding: '1rem',
-      screens :{
-        lg: '1124px',
-        xl: '1124px',
-        "2xl": '1124px',
-      }
+      padding: "1rem",
+      screens: {
+        xl: "1200px",
+        "2xl": "1400px",
+      },
     },
   },
-  plugins: [
-    require('tailwind-nord'),
-  ],
-}
+  plugins: [require("tailwind-nord")],
+};
