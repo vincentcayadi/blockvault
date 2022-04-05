@@ -13,8 +13,7 @@ module.exports = {
       },
       textUnderlineOffset: {
         15: '15px',
-      }
-
+      },
     },
     fontFamily: {
       "manrope": ["Manrope", "sans-serif"],

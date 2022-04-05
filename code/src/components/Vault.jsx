@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import vaultLight from "./images/vaultLight.svg";
-
+import Typical from 'react-typical'
 
 const Vault = () => {
   return (
@@ -9,9 +9,25 @@ const Vault = () => {
       <section class="relative mb-60 lg:mb-80">
         <div class="flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
           <div class="flex flex-1 flex-col items-center lg:items-start">
-            <h2 class="text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-extrabold">
-              Keep your data secure
-            </h2>
+          <h1 class="text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-extrabold">
+              BlockVault
+          </h1>
+          <h1 class="text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-extrabold">
+              Keep your data
+          </h1>
+          <span class="font-mr text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-extrabold"> 
+            <Typical /*https://dev.to/davidamunga/how-to-create-a-text-typing-animation-effect-in-react-49gl */
+            steps={[
+                  'Private',
+                  1000,
+                  ' ',
+                  100,
+                  'Priavte & Secure',
+                  1000,
+                ]}
+                loop={Infinity}
+            />
+            </span>
             <p class="font-medium lg:font-semibold text-center lg:text-left mb-12 text-nord3">
               You control your data. With the help of BlockVault, you can store
               your data securely on the decentralized Blockchain network.
