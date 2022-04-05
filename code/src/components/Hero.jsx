@@ -37,16 +37,20 @@ export const Hero = () => {
           <h1 class="text-3xl md:text-4 lg:text-4xl text-center mb-6 font-bold">Say hello to decentralized storage.</h1>
           <p class=" lg:text-xl text-center "> Storing data on a centralized server is outdated</p>
           <p class=" lg:text-xl text-center mb-6"> It is time to store your data on the Blockchain</p>
-          <button class="bg-nord3 rounded-xl text-nord6 p-3 text-sm w-1/4 m-auto"> {/* Style this better pls*/}
+          <button class="bg-nord3 rounded-xl text-nord6 p-3 text-sm w-1/4 m-auto mb-12"> {/* Style this better pls*/}
             Learn more
           </button>
         </div>
       </section>
+      <h1 class="text-3xl md:text-4 lg:text-4xl text-center mb-6 font-bold">Crypto Wallets</h1>      
       <section class="relative m-auto">
-        <div class="flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
-          <div class="flex flex-1 flex-col items-center lg:items-start">
-            hello
-            </div>
+        <div class="grid grid-row">    
+          <div>
+            Metamask
+          </div>
+          <div>
+            Phantom
+          </div>
         </div>
       </section>      
     </html>
