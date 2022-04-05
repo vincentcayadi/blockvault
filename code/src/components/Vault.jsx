@@ -24,7 +24,7 @@ const Vault = () => {
                   1000,
                   ' ',
                   1000,
-                  'Priavte & Secure',
+                  'Private & Secure',
                   1000,
                   ' ',
                   1000,
