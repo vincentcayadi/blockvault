@@ -6,12 +6,6 @@
     
 }
 
-*{
-    overflow:scroll; 
-    padding:0;
-    margin:0;
-}
-
 @font-face {
     /*Sans*/
     font-family: "MR-EL";
