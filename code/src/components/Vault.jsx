@@ -27,8 +27,8 @@ const Vault = () => {
               </Link>
             </div>
           </div>
-          <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0">
-            <img class="w-full" src={vaultLight} alt="vaultLight"/>
+          <div class="flex justify-center flex-1">
+            <img class="h-120" src={vaultLight} alt="vaultLight"/>
           </div>
         </div>
       </section>

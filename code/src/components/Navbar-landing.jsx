@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from "react-icons/hi";
-import logo from '../images/black-icontext.png'
-
-const children = "hello";
+import logo from './images/blackIconText.png';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
-    <nav className="md:flex justify-between items-center bg-nord6 sticky top-0 z-20 select-none p-3">
+    <nav className="font-manrope md:flex justify-between items-center bg-nord6 sticky top-0 z-20 select-none p-3">
       <div className="flex items-center justify-between pl-8">
         <Link to="/" className="pl-8">
-          <img src={logo} className="max-h-6 w-full"/>
+          <img src={logo} className="max-h-6 w-full" alt="blockvaultlogo"/>
         </Link>
         {showNav ? (
           <HiOutlineMenuAlt3
@@ -52,25 +50,25 @@ const Navbar = () => {
   );
 };
 
-{
-  /* <div className='px-4 cursor-pointer md:hidden' onClick={handleClick}>
-                <svg className='w-6 h-6'
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor" 
-                strokeWidth={2}>
-                    <path strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </div>
-            <div className="pr-8 md:block hidden">
-                <Link className="p-4" to='/dashboard' onClick={closeMobileMenu}>Dashboard</Link>
-                <Link className="p-4" to='/upload'>Upload</Link>
-                <Link className="p-4" to='/transactions'>Transactions</Link>
-                <button className="p-4 rounded-full" to='/sign-in'>{children}</button>                                
-            </div> */
-}
+// {
+//   /* <div className='px-4 cursor-pointer md:hidden' onClick={handleClick}>
+//                 <svg className='w-6 h-6'
+//                 xmlns="http://www.w3.org/2000/svg" 
+//                 fill="none" 
+//                 viewBox="0 0 24 24" 
+//                 stroke="currentColor" 
+//                 strokeWidth={2}>
+//                     <path strokeLinecap="round" 
+//                     strokeLinejoin="round" 
+//                     d="M4 6h16M4 12h16M4 18h16" />
+//                 </svg>
+//             </div>
+//             <div className="pr-8 md:block hidden">
+//                 <Link className="p-4" to='/dashboard' onClick={closeMobileMenu}>Dashboard</Link>
+//                 <Link className="p-4" to='/upload'>Upload</Link>
+//                 <Link className="p-4" to='/transactions'>Transactions</Link>
+//                 <button className="p-4 rounded-full" to='/sign-in'>{children}</button>                                
+//             </div> */
+// }
 
 export default Navbar;
