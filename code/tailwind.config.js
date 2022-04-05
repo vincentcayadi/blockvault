@@ -7,10 +7,9 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Helvetica", "Arial", "sans-serif"],
-      serif: ["Georgia", "serif"],
+      sans: ["MR-R", "Arial", "Helvetica"],
       mono: [
-        "JB-Mono-Reg",
+        "JB-Reg",
         "monospace",
       ],
     },
