@@ -5,7 +5,7 @@ import vaultLight from "../images/vaultLight.svg";
 
 export const Hero = () => {
   return (
-    <html class="select-none font-sans subpixel-antialiased container bg-nord6">
+    <html class="select-none font-sans subpixel-antialiased container mx-auto bg-nord6 w-full overflow-x-hidden">
       <section class="relative mb-12">
         <div class="flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
           <div class="flex flex-1 flex-col items-center lg:items-start">
@@ -28,7 +28,7 @@ export const Hero = () => {
             </div>
           </div>
           <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0">
-            <img src={vaultLight} alt="vaultLight" />
+            <img class="w-full" src={vaultLight} alt="vaultLight"/>
           </div>
         </div>
       </section>
