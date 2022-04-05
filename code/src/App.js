@@ -14,7 +14,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, fetch()); // Use fetch to get data from API or render the website https://www.youtube.com/watch?v=SR8755C0bME
+    }, 2000); // Use fetch to get data from API or render the website https://www.youtube.com/watch?v=SR8755C0bME
   }, []);
   return (
     <>
