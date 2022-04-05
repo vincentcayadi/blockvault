@@ -10,11 +10,7 @@ module.exports = {
       sans: ["Helvetica", "Arial", "sans-serif"],
       serif: ["Georgia", "serif"],
       mono: [
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        "Liberation Mono",
-        "Courier New",
+        "JB-Mono-Reg",
         "monospace",
       ],
     },

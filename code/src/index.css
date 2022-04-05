@@ -5,3 +5,25 @@
 @layer components {
     
 }
+
+@font-face {
+    /*Mono Font*/
+    font-family: "JB-Mono-EL";
+    src: url("./fonts/JBM/JetBrainsMono-ExtraLight.ttf") format("truetype");
+    font-family: "JB-Mono-L";
+    src: url("./fonts/JBM/JetBrainsMono-Light.ttf") format("truetype");
+    font-family: "JB-Mono-TH";
+    src: url("./fonts/JBM/JetBrainsMono-Thin.ttf") format("truetype");
+    font-family: "JB-Mono-Reg";
+    src: url("./fonts/JBM/JetBrainsMono-Regular.ttf") format("truetype");
+    font-family: "JB-Mono-M";
+    src: url("./fonts/JBM/JetBrainsMono-Medium.ttf") format("truetype");
+    font-family: "JB-Mono-SemiB";
+    src: url("./fonts/JBM/JetBrainsMono-SemiBold.ttf") format("truetype");
+    font-family: "JB-Mono-B";
+    src: url("./fonts/JBM/JetBrainsMono-Bold.ttf") format("truetype");
+    font-family: "JB-Mono-EB";
+    src: url("./fonts/JBM/JetBrainsMono-ExtraBold.ttf") format("truetype");
+    font-family: "JB-Mono-I";
+    src: url("./fonts/JBM/JetBrainsMono-Italic.ttf") format("truetype");    
+}
