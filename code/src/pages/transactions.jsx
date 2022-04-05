@@ -1,3 +1,4 @@
+import { Footer } from "@mantine/core";
 import React from "react";
 import Navbar from "../components/Navbar";
 
