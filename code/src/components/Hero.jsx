@@ -5,7 +5,7 @@ import vaultLight from "../images/vaultLight.svg";
 
 export const Hero = () => {
   return (
-    <html class="select-none font-sans subpixel-antialiased container">
+    <html class="select-none font-mr subpixel-antialiased container">
       <section class="relative mb-12">
         <div class="flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
           <div class="flex flex-1 flex-col items-center lg:items-start">
@@ -44,30 +44,17 @@ export const Hero = () => {
       </section>
       <h1 class="text-3xl md:text-4 lg:text-4xl text-center mb-8 font-bold">Crypto Wallets</h1>
       <p class="lg:text-xl text-center mb-6">BlockVault provides support for some commonly use crypto wallets for authentication and login</p>      
-      <section class="relative">
-        <div class="grid grid-cols-2 gap-14">    
-          <div class="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow">
-            <h1 class="font-medium text-2xl mb-6">
-              Metamask (Etherium)
-            </h1>
-            <p>
-              Use Metamask to interact with the Etherium, Polygon blockchain
-            </p>
-            <button class="absolute bottom-12 left-12 bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 hover:bg-transparent hover:text-nord3 hover:border-2 hover:border-nord3 duration-100">
-              Connect
-            </button>
-          </div>
-          <div class="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-1 duration-300 hover:shadow">
-            <h1 class="font-medium text-2xl mb-6">
-              Phantom (Solana)
-            </h1>
-            <p>
-              Use Phantom to interact with the Solana blockchain
-            </p>
-            <button class="absolute bottom-12 left-12 bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 hover:bg-transparent hover:text-nord3 hover:border-2 hover:border-nord3 duration-100">
-              Connect
-            </button>
-          </div>
+      <section class="relative"> 
+        <div class="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow w-1/2 m-auto">
+          <h1 class="font-medium text-2xl mb-6">
+            Metamask (Etherium)
+          </h1>
+          <p>
+            Use Metamask to interact with the Etherium, Polygon blockchain
+          </p>
+          <button class="absolute bottom-12 left-12 bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 hover:bg-transparent hover:text-nord3 hover:border-2 hover:border-nord3 duration-100">
+            Connect
+          </button>
         </div>
       </section>
       

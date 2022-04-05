@@ -7,11 +7,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["MR-R", "Arial", "Helvetica"],
-      mono: [
-        "JB-Reg",
-        "monospace",
-      ],
+      mr: ["MR-R","sans-serif"],
+      jb: ["JB-Reg","monospace"],
     },
     container: {
       center: true,
