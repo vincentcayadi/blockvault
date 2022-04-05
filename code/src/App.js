@@ -16,7 +16,7 @@ function App() {
     }, 2000); // Use fetch to get data from API or render the website https://www.youtube.com/watch?v=SR8755C0bME
   }, []);
   return (
-    <div className="App">
+    <div class="overflow-auto">
       {loading ? (
         <ReactLoading
           type={"cubes"}
