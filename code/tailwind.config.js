@@ -11,16 +11,8 @@ module.exports = {
 
     },
     fontFamily: {
-      sans: ["Helvetica", "Arial", "sans-serif"],
-      serif: ["Georgia", "serif"],
-      mono: [
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        "Liberation Mono",
-        "Courier New",
-        "monospace",
-      ],
+      mr: ["MR-R","sans-serif"],
+      jb: ["JB-Reg","monospace"],
     },
     container: {
       center: true,

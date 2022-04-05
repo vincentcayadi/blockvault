@@ -10,7 +10,7 @@ export const Hero = () => {
         <div class="flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
           <div class="flex flex-1 flex-col items-center lg:items-start">
             <h2 class="text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-semibold">
-              Keep your data secure.
+              Keep your data secure
             </h2>
             <p class="text-base text-center lg:text-left mb-12">
               You control your data. With the help of BlockVault, you can store
@@ -21,7 +21,7 @@ export const Hero = () => {
               <Link
                 exact
                 to="/dashboard"
-                class="bg-nord3 text-nord5 py-4 px-10 rounded-full text-8"
+                class="bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 -translate-y-0.5 shadow-xl hover:bg-transparent hover:border-2 hover:border-nord1 hover:text-nord1 hover:translate-y-0.5 duration-100"
               >
                 Enter App
               </Link>
@@ -34,10 +34,10 @@ export const Hero = () => {
       </section>
       <section class="relative m-auto">
         <div class="flex flex-col">
-          <h1 class="text-3xl md:text-4 lg:text-4xl text-center mb-6 font-bold">Say hello to decentralized storage.</h1>
+          <h1 class="text-3xl md:text-4 lg:text-4xl text-center mb-6 font-bold">Say hello to decentralized storage</h1>
           <p class=" lg:text-xl text-center"> Storing data on a centralized server is outdated</p>
           <p class=" lg:text-xl text-center mb-6"> It is time to store your data on the Blockchain</p>
-          <button class="bg-nord3 rounded-xl text-nord6 p-3 text-sm w-1/4 m-auto mb-12"> {/* Style this better pls*/}
+          <button class="bg-nord3 rounded-xl text-nord6 p-4 text-sm w-1/4 m-auto mb-12"> {/* Style this better pls*/}
             Learn more
           </button>
         </div>
@@ -45,7 +45,7 @@ export const Hero = () => {
       <h1 class="text-3xl md:text-4 lg:text-4xl text-center mb-8 font-bold">Crypto Wallets</h1>
       <p class="lg:text-xl text-center mb-6">BlockVault provides support for some commonly use crypto wallets for authentication and login</p>      
       <section class="relative">
-        <div class="grid grid-cols-2 gap-10">    
+        <div class="grid grid-cols-2 gap-14">    
           <div class="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow">
             <h1 class="font-medium text-2xl mb-6">
               Metamask (Etherium)
