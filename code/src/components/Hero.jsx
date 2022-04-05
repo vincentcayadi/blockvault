@@ -21,7 +21,7 @@ export const Hero = () => {
               <Link
                 exact
                 to="/dashboard"
-                class="bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 -translate-y-0.5 shadow-xl hover:bg-transparent hover:border-2 hover:border-nord1 hover:text-nord1 hover:translate-y-0.5 duration-100"
+                class="bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 shadow-xl hover:bg-transparent hover:border-2 hover:border-nord1 hover:text-nord1 hover:scale-110% duration-100"
               >
                 Enter App
               </Link>
@@ -32,7 +32,7 @@ export const Hero = () => {
           </div>
         </div>
       </section>
-      <section class="relative m-auto">
+      <section class="relative">
         <div class="flex flex-col">
           <h1 class="text-3xl md:text-4 lg:text-4xl text-center mb-6 font-bold">Say hello to decentralized storage</h1>
           <p class=" lg:text-xl text-center"> Storing data on a centralized server is outdated</p>
@@ -45,7 +45,7 @@ export const Hero = () => {
       <h1 class="text-3xl md:text-4 lg:text-4xl text-center mb-8 font-bold">Crypto Wallets</h1>
       <p class="lg:text-xl text-center mb-6">BlockVault provides support for some commonly use crypto wallets for authentication and login</p>      
       <section class="relative">
-        <div class="grid grid-cols-2 gap-14">    
+        <div class="grid grid-cols-2 gap-14">
           <div class="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow">
             <h1 class="font-medium text-2xl mb-6">
               Metamask (Etherium)
@@ -53,9 +53,11 @@ export const Hero = () => {
             <p>
               Use Metamask to interact with the Etherium, Polygon blockchain
             </p>
-            <button class="absolute bottom-12 left-12 bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 hover:bg-transparent hover:text-nord3 hover:border-2 hover:border-nord3 duration-100">
-              Connect
-            </button>
+            <div>
+              <button class="absolute bottom-12 left-12 bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 hover:bg-transparent hover:text-nord3 hover:border-2 hover:border-nord3 duration-100">
+                Connect
+              </button>
+            </div>
           </div>
           <div class="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-1 duration-300 hover:shadow">
             <h1 class="font-medium text-2xl mb-6">
