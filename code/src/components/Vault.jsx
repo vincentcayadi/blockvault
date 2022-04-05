@@ -18,11 +18,15 @@ const Vault = () => {
           <span class="font-mr text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-extrabold"> 
             <Typical /*https://dev.to/davidamunga/how-to-create-a-text-typing-animation-effect-in-react-49gl */
             steps={[
+                  ' ',
+                  1000,              
                   'Private',
                   1000,
                   ' ',
-                  100,
+                  1000,
                   'Priavte & Secure',
+                  1000,
+                  ' ',
                   1000,
                 ]}
                 loop={Infinity}
