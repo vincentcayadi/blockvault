@@ -6,6 +6,7 @@ import Upload from "./pages/upload";
 import Transactions from "./pages/transactions";
 import React, { useState, useEffect } from "react";
 import ReactLoading from "react-loading";
+import NotFoundPage from "./pages/404";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="dashboard" element={<Dashboard />} />
           <Route exact path="upload" element={<Upload />} />
           <Route exact path="transactions" element={<Transactions />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       )}
     </div>

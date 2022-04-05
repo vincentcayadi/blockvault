@@ -1,13 +1,15 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const NotFoundPage = () => {
   return (
     <>
       <Navbar />
       <body className="container">
-        <div>Hello</div>
-        <div>Wassa</div>
+        <h1>NOT FOUND</h1>
       </body>
+      <Footer />
     </>
   );
 };

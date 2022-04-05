@@ -33,7 +33,7 @@ const Dashboard = () => {
                 />
               </svg>
             </button>
-            <a class="text-xl p-2">Name</a>
+            <span class="text-xl p-2">Name</span>
           </div>
         </div>
         <div>This is the grid</div>
