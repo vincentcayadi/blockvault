@@ -29,28 +29,28 @@ const Navbar = () => {
       <ul
         className={
           (showNav ? "left-0" : "-left-full") +
-          " md:static fixed bottom-0 top-12 md:flex md:space-x-7 items-center md:bg-transparent bg-gray-500 bg-opacity-90 md:w-auto w-10/12 md:text-gray-500 text-white md:space-y-0 space-y-5 p-2 transition-left"
+          " md:static fixed bottom-0 top-12 md:flex md:space-x-7 items-center md:bg-transparent bg-nord3 bg-opacity-90 md:w-auto w-1/3 md:text-nord3 text-nord6 md:space-y-0 space-y-5 p-2 transition-left"
         }
       >
-        <li>
-          <Link className="p-4" to="/dashboard">
+        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md">
+          <Link className="md:p-4 p-8" to="/dashboard">
             Dashboard
           </Link>
         </li>
-        <li>
-          <Link className="p-4" to="/upload">
+        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md">
+          <Link className="md:p-4 p-8 text-center" to="/upload">
             Upload
           </Link>
         </li>
-        <li>
-          <Link className="p-4" to="/transactions">
+        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md">
+          <Link className="md:p-4 p-8" to="/transactions">
             Transactions
           </Link>
         </li>
-        <li>
-          <button className="p-4 rounded-full" to="/sign-in">
+        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md">
+          <Link className="md:p-4 p-8" to="/sign-in">
             {children}
-          </button>
+          </Link>
         </li>
       </ul>
     </nav>
