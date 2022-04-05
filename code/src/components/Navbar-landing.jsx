@@ -6,7 +6,7 @@ import logo from './images/blackIconText.png';
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
-    <nav className="font-manrope md:flex justify-between items-center bg-nord6 sticky top-0 z-20 select-none p-3 bg-opacity-0">
+    <nav className="font-manrope md:flex justify-between items-center bg-nord6 sticky top-0 z-20 select-none py-4 px-10 bg-opacity-0">
       <div className="flex items-center justify-between pl-8">
         <Link to="/" className="pl-8">
           <img src={logo} className="max-h-6 w-full" alt="blockvaultlogo"/>
@@ -30,18 +30,18 @@ const Navbar = () => {
           " md:static fixed bottom-0 top-12 md:flex md:space-x-7 items-center md:bg-transparent bg-nord3 bg-opacity-90 md:w-auto w-1/3 md:text-nord3 text-nord6 md:space-y-0 space-y-5 p-2 transition-left"
         }
       >
-        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
-          <Link className="md:p-4 p-8" to="/dashboard">
+        <li class="md:p-0 py-4 items-center text-center  md:hover:underline underline-offset-15">
+          <Link class="md:p-4 p-8" to="/dashboard">
             Dashboard
           </Link>
         </li>
-        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
-          <Link className="md:p-4 p-8" to="/transactions">
+        <li class="md:p-0 py-4 items-center text-center md:hover:underline underline-offset-15">
+          <Link class="md:p-4 p-8" to="/transactions">
             Transactions
           </Link>
         </li>
-        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
-          <Link className="md:p-4 p-8" to="/sign-in">
+        <li class="p-3 items-center text-center rounded-xl bg-nord1 text-white font-semibold hover:scale-125 duration-300">
+          <Link class="md:p-4 p-8" to="/sign-in">
             Get Started
           </Link>
         </li>

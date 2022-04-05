@@ -8,11 +8,11 @@ const Wallet = () => {
       <p class="lg:text-xl text-center mb-6">BlockVault provides support for some commonly use crypto wallets for authentication and login</p>      
       <section class="relative">
         <div class="grid grid-cols-2 gap-14">
-          <div class="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow bg-nord5">
-            <h1 class="font-medium text-2xl mb-6 inline-block mr-2">
+          <div class="border-2 border-#DFDFDF rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow bg-nord5">
+            <h1 class="font-bold lg:text-2xl mb-6 inline-block mr-2">
               Metamask (Ethereum) 
             </h1>
-            <img src={metamask} class="inline-block h-10 w-10"/>
+            <img src={metamask} class="inline-block h-10 w-10" alt="MetaMask"/>
             <p>
               Use Metamask to interact with the Ethereum, Polygon blockchain
             </p>
@@ -23,7 +23,7 @@ const Wallet = () => {
             </div>
           </div>
           <div class="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-1 duration-300 hover:shadow bg-nord5">
-            <h1 class="font-medium text-2xl mb-6">
+            <h1 class="font-bold lg:text-2xl mb-6">
               Phantom (Solana)
             </h1>
             <p>
