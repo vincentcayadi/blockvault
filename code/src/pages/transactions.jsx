@@ -1,6 +1,6 @@
-import { Footer } from "@mantine/core";
 import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Transactions = () => {
   return (
@@ -10,6 +10,7 @@ const Transactions = () => {
         <div>Hello</div>
         <div>Wassa</div>
       </body>
+      <Footer />
     </>
   );
 };

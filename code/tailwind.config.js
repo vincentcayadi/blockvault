@@ -16,8 +16,8 @@ module.exports = {
 
     },
     fontFamily: {
-      mr: ["MR-R","sans-serif"],
-      jb: ["JB-Reg","monospace"],
+      "manrope": ["Manrope", "sans-serif"],
+      "jb-mono": ["JetBrains Mono", "monospace"],
     },
     container: {
       center: true,
