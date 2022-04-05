@@ -1,4 +1,5 @@
 import React from "react";
+import metamask from "./images/metamask.svg";
 
 const Wallet = () => {
   return (
@@ -8,9 +9,10 @@ const Wallet = () => {
       <section class="relative">
         <div class="grid grid-cols-2 gap-14">
           <div class="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow bg-nord5">
-            <h1 class="font-medium text-2xl mb-6">
-              Metamask (Ethereum)
+            <h1 class="font-medium text-2xl mb-6 inline-block mr-2">
+              Metamask (Ethereum) 
             </h1>
+            <img src={metamask} class="inline-block h-10 w-10"/>
             <p>
               Use Metamask to interact with the Ethereum, Polygon blockchain
             </p>
