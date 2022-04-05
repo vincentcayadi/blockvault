@@ -5,6 +5,10 @@ module.exports = {
       transitionProperty: {
         left: "left",
       },
+      textUnderlineOffset: {
+        15: '15px',
+      }
+
     },
     fontFamily: {
       sans: ["Helvetica", "Arial", "sans-serif"],
