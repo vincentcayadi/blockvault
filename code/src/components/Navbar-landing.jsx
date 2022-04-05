@@ -38,18 +38,13 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
-          <Link className="md:p-4 p-8 text-center" to="/upload">
-            Upload
-          </Link>
-        </li>
-        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
           <Link className="md:p-4 p-8" to="/transactions">
             Transactions
           </Link>
         </li>
         <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
           <Link className="md:p-4 p-8" to="/sign-in">
-            {children}
+            Get Started
           </Link>
         </li>
       </ul>
