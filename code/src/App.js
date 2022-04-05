@@ -1,7 +1,6 @@
 import { Link, Routes, Route } from "react-router-dom";
-import { Button } from "@mantine/core";
-import Hero from "./components/Hero";
 // Pages
+import Index from "./pages/index"
 import Dashboard from "./pages/dashboard";
 import Upload from "./pages/upload";
 import Transactions from "./pages/transactions";
@@ -38,11 +37,10 @@ function App() {
   );
 }
 
-// App.js
 function Home() {
   return (
     <>
-      <Hero />
+      <Index />
     </>
   );
 }
