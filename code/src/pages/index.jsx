@@ -54,7 +54,6 @@ const Index = () => {
             </filter>
             </defs>
           </svg>
-
         </div>
         <NavBar />
         <Hero/>
