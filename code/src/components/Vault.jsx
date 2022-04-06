@@ -20,11 +20,11 @@ const Vault = () => {
             steps={[
                   ' ',
                   1000,              
-                  'Private',
+                  'Private.',
                   1000,
                   ' ',
                   1000,
-                  'Private & Secure',
+                  'Secure.',
                   1000,
                   ' ',
                   1000,

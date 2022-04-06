@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from "react-icons/hi";
 import logo from './images/blackIconText.png'
+import './navbar-hover.css';
 
 const children = "hello";
 
@@ -32,23 +33,23 @@ const Navbar = () => {
           " md:static fixed bottom-0 top-12 md:flex md:space-x-7 items-center md:bg-transparent bg-nord3 bg-opacity-90 md:w-auto w-1/3 md:text-nord3 text-nord6 md:space-y-0 space-y-5 p-2 transition-left"
         }
       >
-        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
-          <Link className="md:p-4 p-8" to="/dashboard">
+        <li className="md:p-0 py-4 items-center text-center sm:hover:bg-nord1 rounded-md">
+          <Link className="navbar-underline" to="/dashboard">
             Dashboard
           </Link>
         </li>
-        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
-          <Link className="md:p-4 p-8 text-center" to="/upload">
+        <li className="md:p-0 py-4 items-center text-center sm:hover:bg-nord1 rounded-md">
+          <Link className="navbar-underline" to="/upload">
             Upload
           </Link>
         </li>
-        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
-          <Link className="md:p-4 p-8" to="/transactions">
+        <li className="md:p-0 py-4 items-center text-center sm:hover:bg-nord1 rounded-md">
+          <Link className="navbar-underline" to="/transactions">
             Transactions
           </Link>
         </li>
-        <li className="md:p-0 py-4 items-center text-center hover:bg-nord1 rounded-md md:hover:underline md:hover:bg-nord6 underline-offset-15">
-          <Link className="md:p-4 p-8" to="/sign-in">
+        <li className="md:p-0 py-4 items-center text-center sm:hover:bg-nord1 rounded-md">
+          <Link className="navbar-underline" to="/sign-in">
             {children}
           </Link>
         </li>
