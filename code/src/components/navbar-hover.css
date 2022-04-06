@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+    .navbar-underline {
+        position: relative;
+        color: nord1;
+        text-decoration: none;
+        padding:4px;
+        /* padding-bottom:15px; */
+    }
+        
+    .navbar-underline:hover {
+        color: nord1;
+    }
+        
+    .navbar-underline::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+        
+    .navbar-underline:hover::before {
+        transform: scaleX(1);
+    }
+}
+
+.navbar-underline{
+    padding:8px;
+}
+
+  

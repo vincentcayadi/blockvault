@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from "react-icons/hi";
 import logo from './images/blackIconText.png';
+import './navbar-hover.css';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -30,17 +31,17 @@ const Navbar = () => {
           " md:static fixed bottom-0 top-12 md:flex md:space-x-7 items-center md:bg-transparent bg-nord3 bg-opacity-90 md:w-auto w-1/3 md:text-nord3 text-nord6 md:space-y-0 space-y-5 p-2 transition-left"
         }
       >
-        <li className="md:p-0 py-4 items-center text-center md:hover:underline underline-offset-15">
-          <Link className="md:p-4 p-8" to="/dashboard">
+        <li className="md:p-0 py-4 items-center text-center">
+          <Link className="navbar-underline" to="/dashboard">
             Dashboard
           </Link>
         </li>
-        <li className="md:p-0 py-4 items-center text-center md:hover:underline underline-offset-15">
-          <Link className="md:p-4 p-8" to="/transactions">
+        <li className="md:p-0 py-4 items-center text-center">
+          <Link className="navbar-underline" to="/transactions">
             Transactions
           </Link>
         </li>
-        <li className="p-3 items-center text-center rounded-xl bg-nord1 text-white font-semibold hover:scale-125 duration-300">
+        <li className="p-3 items-center text-center rounded-xl bg-nord1 text-white font-semibold md:hover:scale-125 duration-300">
           <Link className="md:p-4 p-8" to="/sign-in">
             Get Started
           </Link>

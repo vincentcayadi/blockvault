@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 @layer components {
-    
+    .hexagon{
+        @apply absolute sm:hidden;
+        top: 500px;
+    }
+    /* .navbar-underline{ 
+        @apply relative no-underline hover:text-black md:p-4 py-8 before:content-[""] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black before:scale-x-0 before:transition-transform hover:before:scale-x-100;
+    } */
+
 }
