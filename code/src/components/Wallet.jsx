@@ -1,5 +1,6 @@
 import React from "react";
 import metamask from "./images/metamask.svg";
+import phantom from "./images/phantom-icon-purple.svg";
 
 const Wallet = () => {
   return (
@@ -22,14 +23,15 @@ const Wallet = () => {
               </button>
             </div>
           </div>
-          <div className="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-1 duration-300 hover:shadow bg-nord5">
-            <h1 className="font-bold lg:text-2xl mb-6">
+          <div className="border-2 rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow bg-nord5">
+            <h1 className="font-bold lg:text-2xl mb-6 inline-block mr-2">
               Phantom (Solana)
             </h1>
+            <img src={phantom} className="inline-block h-10 w-10" alt="Phantom"/>
             <p>
               Use Phantom to interact with the Solana blockchain
             </p>
-            <button className="absolute bottom-12 left-12 bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 hover:bg-transparent hover:text-nord3 hover:border-2 hover:border-nord3 duration-100">
+              <button className="absolute bottom-12 left-12 bg-nord3 text-nord5 py-4 px-10 rounded-full text-8 hover:bg-transparent hover:text-nord3 hover:border-2 hover:border-nord3 duration-100">
               Connect
             </button>
           </div>
