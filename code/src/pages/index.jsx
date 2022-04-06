@@ -11,15 +11,15 @@ const Index = () => {
   return (
     <>
         <div className="absolute bg-nord6 right-0 top-0 sm:hidden">
-          <img src={landingDesign}/>
+          <img src={landingDesign} alt="landingDesign"/>
         </div>
 
         <div className="absolute top-16 sm:hidden">
-          <img src={hexagon1}/>
+          <img src={hexagon1} alt="hexagon1"/>
         </div>
 
         <div className="hexagon">
-          <img src={hexagon2}/>
+          <img src={hexagon2} alt="hexagon2"/>
         </div>
         <NavBar />
         <Hero/>
