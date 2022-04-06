@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
   return (
     <>
-        <div className="bg-nord6 mx-auto max-w-s my-12 py-4 px-12 border-b-2 font-mr border-nord5 container select-none">
-          <p className="font-bold inline-block text-sm">BlockVault</p>
-          <p className="px-4 inline-block text-xs text-nord2/25">
-            Keep Your Data Secure
-          </p>
-        </div>
+      <div className="container px-12 py-4 mx-auto my-12 border-b-2 select-none bg-nord6 max-w-s font-mr border-nord5">
+        <p className="inline-block text-sm font-bold">BlockVault</p>
+        <p className="inline-block px-4 text-xs text-nord2/25">
+          Keep Your Data Secure
+        </p>
+      </div>
     </>
   );
 };

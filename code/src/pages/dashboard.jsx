@@ -8,12 +8,12 @@ const Dashboard = () => {
     <>
       <Navbar />
       <body className="container select-none bg-nord6">
-        <div className="flex bg-nord6 rounded-md my-8 w-full">
-          <div className="flex-auto rounded-md p-4">
-            <h1 className="font-bold text-2xl">Welcome back,</h1>
+        <div className="flex w-full my-8 rounded-md bg-nord6">
+          <div className="flex-auto p-4 rounded-md">
+            <h1 className="text-2xl font-bold">Welcome back,</h1>
             <p className="font-bold">{username}</p>
           </div>
-          <div className="flex-auto border-2 rounded-md p-2">
+          <div className="flex-auto p-2 border-2 rounded-md">
             <div className="border-2">Insert the transaction thingy here</div>
             <div>Insert Gas Price Here:</div>
           </div>
@@ -23,7 +23,7 @@ const Dashboard = () => {
             <button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="w-5 h-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >

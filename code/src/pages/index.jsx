@@ -10,7 +10,7 @@ import hexagon2 from "../components/images/landinghexagon2.svg";
 const Index = () => {
   return (
     <>
-        <div className="absolute bg-nord6 right-0 top-0 sm:hidden">
+        <div className="absolute top-0 right-0 bg-nord6 sm:hidden">
           <img src={landingDesign} alt="landingDesign"/>
         </div>
 

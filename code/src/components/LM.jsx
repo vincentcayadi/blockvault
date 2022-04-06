@@ -5,10 +5,10 @@ const LearnMore = () => {
     <>
       <section className="relative mb-60 lg:mb-80">
           <div className="flex flex-col">
-              <h1 className="text-3xl md:text-4 lg:text-4xl text-center mb-6 font-bold text-nord0">Say hello to decentralized storage</h1>
-              <p className=" lg:text-xl text-center text-nord3"> Storing data on a centralized server is outdated</p>
-              <p className=" lg:text-xl text-center text-nord3 mb-6"> It is time to store your data on the Blockchain</p>
-              <button className="bg-nord2 rounded-xl text-white p-4 text-sm w-1/4 mx-auto hover:bg-transparent hover:text-nord2 hover:border-2 hover:border-nord2 hover:scale-110 duration-300"> {/* Style this better pls*/}
+              <h1 className="mb-6 text-3xl font-bold text-center md:text-4 lg:text-4xl text-nord0">Say hello to decentralized storage</h1>
+              <p className="text-center lg:text-xl text-nord3"> Storing data on a centralized server is outdated</p>
+              <p className="mb-6 text-center lg:text-xl text-nord3"> It is time to store your data on the Blockchain</p>
+              <button className="w-1/4 p-4 mx-auto text-sm text-white duration-300 bg-nord2 rounded-xl hover:bg-transparent hover:text-nord2 hover:border-2 hover:border-nord2 hover:scale-110"> {/* Style this better pls*/}
                   Learn more
               </button>
           </div>

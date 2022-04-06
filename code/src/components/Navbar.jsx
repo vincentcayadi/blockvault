@@ -9,20 +9,20 @@ const children = "hello";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
-    <nav className="md:flex justify-between items-center bg-nord6 sticky top-0 z-20 select-none p-3">
+    <nav className="sticky top-0 z-20 items-center justify-between p-3 select-none md:flex bg-nord6">
       <div className="flex items-center justify-between">
         <Link to="/" className="pl-8">
-          <img src={logo} className="max-h-6 w-full" alt="blockvault logo"/>
+          <img src={logo} className="w-full max-h-6" alt="blockvault logo"/>
         </Link>
         {showNav ? (
           <HiOutlineMenuAlt3
             onClick={() => setShowNav(!showNav)}
-            className="md:hidden block w-10 h-10 p-2 cursor-pointer"
+            className="block w-10 h-10 p-2 cursor-pointer md:hidden"
           />
         ) : (
           <HiOutlineMenuAlt2
             onClick={() => setShowNav(!showNav)}
-            className="md:hidden block w-10 h-10 p-2 cursor-pointer"
+            className="block w-10 h-10 p-2 cursor-pointer md:hidden"
           />
         )}
       </div>
@@ -33,22 +33,22 @@ const Navbar = () => {
           " md:static fixed bottom-0 top-12 md:flex md:space-x-7 items-center md:bg-transparent bg-nord3 bg-opacity-90 md:w-auto w-1/3 md:text-nord3 text-nord6 md:space-y-0 space-y-5 p-2 transition-left"
         }
       >
-        <li className="md:p-0 py-4 items-center text-center sm:hover:bg-nord1 rounded-md">
+        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
           <Link className="navbar-underline" to="/dashboard">
             Dashboard
           </Link>
         </li>
-        <li className="md:p-0 py-4 items-center text-center sm:hover:bg-nord1 rounded-md">
+        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
           <Link className="navbar-underline" to="/upload">
             Upload
           </Link>
         </li>
-        <li className="md:p-0 py-4 items-center text-center sm:hover:bg-nord1 rounded-md">
+        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
           <Link className="navbar-underline" to="/transactions">
             Transactions
           </Link>
         </li>
-        <li className="md:p-0 py-4 items-center text-center sm:hover:bg-nord1 rounded-md">
+        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
           <Link className="navbar-underline" to="/sign-in">
             {children}
           </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
 //                     d="M4 6h16M4 12h16M4 18h16" />
 //                 </svg>
 //             </div>
-//             <div className="pr-8 md:block hidden">
+//             <div className="hidden pr-8 md:block">
 //                 <Link className="p-4" to='/dashboard' onClick={closeMobileMenu}>Dashboard</Link>
 //                 <Link className="p-4" to='/upload'>Upload</Link>
 //                 <Link className="p-4" to='/transactions'>Transactions</Link>
