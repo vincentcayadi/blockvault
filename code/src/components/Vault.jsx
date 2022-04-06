@@ -8,7 +8,7 @@ const Vault = () => {
     <>
       <section className="relative mb-60 lg:mb-80">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
-          <div className="flex flex-1 flex-col items-center lg:items-start">
+          <div className="flex flex-1 flex-col items-center lg:items-start pl-8">
           <h1 className="text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-extrabold">
               BlockVault
           </h1>
@@ -20,11 +20,11 @@ const Vault = () => {
             steps={[
                   ' ',
                   1000,              
-                  'Private.',
+                  'Private',
                   1000,
                   ' ',
                   1000,
-                  'Secure.',
+                  'Secure',
                   1000,
                   ' ',
                   1000,

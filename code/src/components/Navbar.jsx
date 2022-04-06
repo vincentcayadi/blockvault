@@ -10,7 +10,7 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
     <nav className="md:flex justify-between items-center bg-nord6 sticky top-0 z-20 select-none p-3">
-      <div className="flex items-center justify-between pl-8">
+      <div className="flex items-center justify-between">
         <Link to="/" className="pl-8">
           <img src={logo} className="max-h-6 w-full" alt="blockvault logo"/>
         </Link>

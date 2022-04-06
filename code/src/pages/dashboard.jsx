@@ -2,15 +2,16 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+const username = "Chonky Ass"
 const Dashboard = () => {
   return (
     <>
       <Navbar />
-      <body className="container select-none">
-        <div className="flex bg-nord6 rounded-md p-2 m-auto my-8 space-x-4">
-          <div className="flex-auto border-2 rounded-md p-2">
-            <h1>Hello</h1>
-            <p className="font-bold">Files Uploaded</p>
+      <body className="container select-none bg-nord6">
+        <div className="flex bg-nord6 rounded-md my-8 w-full">
+          <div className="flex-auto rounded-md p-4">
+            <h1 className="font-bold text-2xl">Welcome back,</h1>
+            <p className="font-bold">{username}</p>
           </div>
           <div className="flex-auto border-2 rounded-md p-2">
             <div className="border-2">Insert the transaction thingy here</div>
