@@ -1,12 +1,12 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 // Pages
-import Index from "./pages/index"
-import Dashboard from "./pages/dashboard";
-import Upload from "./pages/upload";
-import Transactions from "./pages/transactions";
-import React, { useState, useEffect } from "react";
-import ReactLoading from "react-loading";
-import NotFoundPage from "./pages/404";
+import Index from './pages/index';
+import Dashboard from './pages/dashboard';
+import Upload from './pages/upload';
+import Transactions from './pages/transactions';
+import React, { useState, useEffect } from 'react';
+import ReactLoading from 'react-loading';
+import NotFoundPage from './pages/404';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -20,10 +20,10 @@ function App() {
     <div class="overflow-auto">
       {loading ? (
         <ReactLoading
-          type={"cubes"}
-          color={"FFFFF"}
-          height={"20%"}
-          width={"20%"}
+          type={'cubes'}
+          color={'FFFFF'}
+          height={'20%'}
+          width={'20%'}
           loading={loading}
         />
       ) : (
