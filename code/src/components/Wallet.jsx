@@ -27,7 +27,7 @@ const Wallet = () => {
               Use Metamask to interact with the Ethereum, Polygon blockchain
             </p>
             <div>
-              <button className="absolute px-10 py-4 duration-100 rounded-full bottom-12 left-12 bg-nord3 text-nord5 text-8 hover:bg-transparent hover:text-nord3 hover:border-2 hover:border-nord3">
+              <button className="absolute px-10 py-4 duration-100 border-2 rounded-full bottom-12 left-12 bg-nord3 text-nord5 text-8 hover:bg-transparent hover:text-nord3 hover:border-nord3">
                 Connect
               </button>
             </div>
@@ -42,7 +42,7 @@ const Wallet = () => {
               alt="Phantom"
             />
             <p>Use Phantom to interact with the Solana blockchain</p>
-            <button className="absolute px-10 py-4 duration-100 rounded-full bottom-12 left-12 bg-nord3 text-nord5 text-8 hover:bg-transparent hover:text-nord3 hover:border-2 hover:border-nord3">
+            <button className="absolute px-10 py-4 duration-100 border-2 rounded-full bottom-12 left-12 bg-nord3 text-nord5 text-8 hover:bg-transparent hover:text-nord3 hover:border-nord3">
               Connect
             </button>
           </div>

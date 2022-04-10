@@ -32,9 +32,11 @@ const Vault = () => {
                 loop={Infinity}
               />
             </span>
-            <p className="mb-12 font-medium text-center lg:font-semibold lg:text-left text-nord3">
-              You control your data. With the help of BlockVault, you can store
-              your data securely on the decentralized Blockchain network.
+            <p className="font-medium text-center lg:font-semibold lg:text-left text-nord3">
+              With the help of BlockVault,
+            </p>
+            <p className="mb-6 font-medium text-center lg:font-semibold lg:text-left text-nord3">
+              you can store & send your data securely on the Blockchain.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <Link
