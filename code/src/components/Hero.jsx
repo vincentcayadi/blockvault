@@ -5,7 +5,7 @@ import Wallet from '../components/Wallet';
 
 export const Hero = () => {
   return (
-    <div class="select-none font-manrope subpixel-antialiased container bg-nord6 w-full overflow-x-hidden">
+    <div class="select-none font-manrope subpixel-antialiased container bg-nord6 dark:bg-nord0 w-full overflow-x-hidden">
       <Vault />
       <LearnMore />
       <Wallet />
