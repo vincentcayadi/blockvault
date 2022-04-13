@@ -8,29 +8,23 @@ import './navbar-hover.css';
 
 const Navbar = () => {
   var icontheme;
-  if (localStorage.getItem('theme') === 'dark'){
+  if (localStorage.theme === 'dark'){
     icontheme = darklighticon;
   } else{
     icontheme = lightdarkicon;
   }
   const [showNav, setShowNav] = useState(false);
   const toggletheme = () => {
-    if (localStorage.getItem('theme')) {
-      if (localStorage.getItem('theme') === 'light') {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark');
+      localStorage.theme = "light";
+      icontheme = lightdarkicon;
+      console.log(icontheme);
     } else {
-      if (document.documentElement.classList.contains('dark')) {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      } else {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      }
+      document.documentElement.classList.add('dark');
+      localStorage.theme = "dark";
+      icontheme = darklighticon;
+      console.log(icontheme);
     }
   };
   return (
