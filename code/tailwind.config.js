@@ -1,6 +1,6 @@
 module.exports = {
   darkMode: 'class',
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './node_modules/flowbite/**/*.js  '],
   theme: {
     screens: {
       sm: { max: '1023px' },
@@ -28,5 +28,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwind-nord')],
+  plugins: [require('tailwind-nord'), require('flowbite/plugin')],
 };
