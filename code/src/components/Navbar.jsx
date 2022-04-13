@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from 'react-icons/hi';
 import logo from './images/whiteIconText.svg';
 import './navbar-hover.css';
-
-const children = 'hello';
-
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   return (
@@ -46,11 +43,6 @@ const Navbar = () => {
         <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
           <Link className="navbar-underline" to="/transactions">
             Transactions
-          </Link>
-        </li>
-        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
-          <Link className="navbar-underline" to="/sign-in">
-            {children}
           </Link>
         </li>
       </ul>
