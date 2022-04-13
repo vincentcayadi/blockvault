@@ -7,24 +7,22 @@ import logo from './images/blackIconText.svg';
 import './navbar-hover.css';
 
 const Navbar = () => {
-  var icontheme;
+  const icon = document.getElementById('icon');
   if (localStorage.theme === 'dark'){
-    icontheme = darklighticon;
+    icon.src = darklighticon;
   } else{
-    icontheme = lightdarkicon;
+    icon.src = lightdarkicon;
   }
   const [showNav, setShowNav] = useState(false);
   const toggletheme = () => {
     if (document.documentElement.classList.contains('dark')) {
       document.documentElement.classList.remove('dark');
       localStorage.theme = "light";
-      icontheme = lightdarkicon;
-      console.log(icontheme);
+      icon.src = lightdarkicon;
     } else {
       document.documentElement.classList.add('dark');
       localStorage.theme = "dark";
-      icontheme = darklighticon;
-      console.log(icontheme);
+      icon.src = darklighticon;
     }
   };
   return (
@@ -63,7 +61,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <img src={icontheme} onClick={toggletheme}/>
+          <img src={darklighticon} onClick={toggletheme} id="icon"/>
         </li>
         <li className="items-center px-2 py-3 font-semibold text-center duration-300 py- rounded-xl bg-nord1 text-nord6 md:hover:scale-110">
           <Link className="p-8 md:p-4" exact to="/sign-in">
