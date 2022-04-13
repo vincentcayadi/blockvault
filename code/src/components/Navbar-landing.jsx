@@ -1,11 +1,38 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from 'react-icons/hi';
+import darklighticon from './images/darklighttoggle.svg';
+import lightdarkicon from './images/lightdarktoggle.svg';
 import logo from './images/blackIconText.svg';
 import './navbar-hover.css';
 
 const Navbar = () => {
+  var icontheme;
+  if (localStorage.getItem('theme') === 'dark'){
+    icontheme = darklighticon;
+  } else{
+    icontheme = lightdarkicon;
+  }
   const [showNav, setShowNav] = useState(false);
+  const toggletheme = () => {
+    if (localStorage.getItem('theme')) {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    } else {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+  };
   return (
     <nav className="sticky top-0 z-20 items-center justify-between px-10 py-4 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
       <div className="flex items-center justify-between">
@@ -40,6 +67,9 @@ const Navbar = () => {
           <Link className="navbar-underline" exact to="/transactions">
             Transactions
           </Link>
+        </li>
+        <li>
+          <img src={icontheme} onClick={toggletheme}/>
         </li>
         <li className="items-center px-2 py-3 font-semibold text-center duration-300 py- rounded-xl bg-nord1 text-nord6 md:hover:scale-110">
           <Link className="p-8 md:p-4" exact to="/sign-in">
