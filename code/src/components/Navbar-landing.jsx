@@ -41,7 +41,7 @@ const Navbar = () => {
             Transactions
           </Link>
         </li>
-        <li className="items-center p-3 font-semibold text-center duration-300 rounded-xl bg-nord1 text-nord6 md:hover:scale-125">
+        <li className="items-center px-2 py-3 font-semibold text-center duration-300 py- rounded-xl bg-nord1 text-nord6 md:hover:scale-110">
           <Link className="p-8 md:p-4" exact to="/sign-in">
             Get Started
           </Link>
