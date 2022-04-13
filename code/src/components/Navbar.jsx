@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from 'react-icons/hi';
-import logo from './images/blackIconText.png';
+import logo from './images/whiteIconText.svg';
 import './navbar-hover.css';
 
 const children = 'hello';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from 'react-icons/hi';
-import logo from './images/blackIconText.png';
+import logo from './images/blackIconText.svg';
 import './navbar-hover.css';
 
 const Navbar = () => {
@@ -31,12 +31,12 @@ const Navbar = () => {
           ' md:static fixed bottom-0 top-12 md:flex md:space-x-7 items-center md:bg-transparent bg-nord3 bg-opacity-90 md:w-auto w-1/3 md:text-nord3 text-nord6 md:space-y-0 space-y-5 p-2 transition-left'
         }
       >
-        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
+        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
           <Link className="navbar-underline" exact to="/dashboard">
             Dashboard
           </Link>
         </li>
-        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
+        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
           <Link className="navbar-underline" exact to="/transactions">
             Transactions
           </Link>
