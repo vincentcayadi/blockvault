@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import vaultLight from './images/vaultLight.svg';
+import vaultLight from '../components/images/vaultLight.svg';
+import vaultDark from '../components/images/vaultDark.svg';
 import Typical from 'react-typical';
 
 const Vault = () => {
+  var vaultPic;
+  if (localStorage.theme === 'dark') {
+    vaultPic = vaultLight;
+  } else {
+    vaultPic = vaultDark;
+  }
   return (
     <>
       <section className="relative mb-60 lg:mb-80">
@@ -42,14 +49,14 @@ const Vault = () => {
               <Link
                 exact
                 to="/dashboard"
-                className="bg-nord1 text-white py-4 px-10 rounded-full text-8 shadow-xl hover:bg-transparent border-2 hover:border-nord1 hover:text-nord1 hover:scale-110% duration-200 delay-100 dark:border-nord0 dark:hover:bg-nord6 dark:hover:text-nord0 dark:border-0"
+                className="bg-nord1 text-white py-4 px-10 rounded-full text-8 shadow-xl hover:bg-transparent border-2 border-nord1 hover:text-nord1 hover:scale-110% duration-200 dark:border-nord0 dark:hover:bg-nord6 dark:hover:text-nord0 dark:border-0"
               >
                 Enter App
               </Link>
             </div>
           </div>
           <div className="flex justify-center flex-1">
-            <img className="h-120" src={vaultLight} alt="vaultLight" />
+            <img className="h-120" src={vaultPic} alt="vault" />
           </div>
         </div>
       </section>

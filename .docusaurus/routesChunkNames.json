@@ -1,0 +1,197 @@
+{
+  "/blockvault/__docusaurus/debug-d9c": {
+    "component": "component---theme-debug-config-23-a-2ff",
+    "__routeContextModule": "__routeContextModule---blockvault-docusaurus-debugca-9-60b"
+  },
+  "/blockvault/__docusaurus/debug/config-86e": {
+    "component": "component---theme-debug-config-23-a-2ff",
+    "__routeContextModule": "__routeContextModule---blockvault-docusaurus-debugca-9-60b"
+  },
+  "/blockvault/__docusaurus/debug/content-8ea": {
+    "component": "component---theme-debug-contentba-8-ce7",
+    "allContent": "allContent---blockvault-docusaurus-debug-content-246-757",
+    "__routeContextModule": "__routeContextModule---blockvault-docusaurus-debugca-9-60b"
+  },
+  "/blockvault/__docusaurus/debug/globalData-f0e": {
+    "component": "component---theme-debug-global-dataede-0fa",
+    "__routeContextModule": "__routeContextModule---blockvault-docusaurus-debugca-9-60b"
+  },
+  "/blockvault/__docusaurus/debug/metadata-482": {
+    "component": "component---theme-debug-site-metadata-68-e-3d4",
+    "__routeContextModule": "__routeContextModule---blockvault-docusaurus-debugca-9-60b"
+  },
+  "/blockvault/__docusaurus/debug/registry-36a": {
+    "component": "component---theme-debug-registry-679-501",
+    "__routeContextModule": "__routeContextModule---blockvault-docusaurus-debugca-9-60b"
+  },
+  "/blockvault/__docusaurus/debug/routes-bb9": {
+    "component": "component---theme-debug-routes-946-699",
+    "__routeContextModule": "__routeContextModule---blockvault-docusaurus-debugca-9-60b"
+  },
+  "/blockvault/blog-40e": {
+    "component": "component---theme-blog-list-pagea-6-a-7ba",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "items": [
+      {
+        "content": "content---blockvault-blog-766-374"
+      },
+      {
+        "content": "content---blockvault-blogf-4-f-c10"
+      },
+      {
+        "content": "content---blockvault-blog-871-b6d"
+      },
+      {
+        "content": "content---blockvault-blog-925-ccd"
+      }
+    ],
+    "metadata": "metadata---blockvault-blog-7-ab-cfe",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/archive-1b9": {
+    "component": "component---theme-blog-archive-page-9-e-4-1d8",
+    "archive": "archive---blockvault-blog-archive-5-c-4-595",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/first-blog-post-fd4": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "content": "content---blockvault-blog-first-blog-poste-27-2d1",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/long-blog-post-af7": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "content": "content---blockvault-blog-long-blog-post-736-4f6",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/mdx-blog-post-88d": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "content": "content---blockvault-blog-mdx-blog-post-593-4ac",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/tags-0cb": {
+    "component": "component---theme-blog-tags-list-page-01-a-d0b",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "tags": "tags---blockvault-blog-tags-769-43d",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/tags/docusaurus-da6": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "items": [
+      {
+        "content": "content---blockvault-blog-766-374"
+      },
+      {
+        "content": "content---blockvault-blogf-4-f-c10"
+      },
+      {
+        "content": "content---blockvault-blog-871-b6d"
+      },
+      {
+        "content": "content---blockvault-blog-925-ccd"
+      }
+    ],
+    "metadata": "metadata---blockvault-blog-tags-docusaurus-4-c-8-cf5",
+    "listMetadata": "listMetadata---blockvault-blog-tags-docusaurus-1-d-5-5ef",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/tags/facebook-8f4": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "items": [
+      {
+        "content": "content---blockvault-blog-766-374"
+      }
+    ],
+    "metadata": "metadata---blockvault-blog-tags-facebook-987-cad",
+    "listMetadata": "listMetadata---blockvault-blog-tags-facebook-9-a-4-43b",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/tags/hello-cf7": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "items": [
+      {
+        "content": "content---blockvault-blog-766-374"
+      },
+      {
+        "content": "content---blockvault-blog-871-b6d"
+      }
+    ],
+    "metadata": "metadata---blockvault-blog-tags-hello-8-bf-9fd",
+    "listMetadata": "listMetadata---blockvault-blog-tags-hello-020-f52",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/tags/hola-7df": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "items": [
+      {
+        "content": "content---blockvault-blog-925-ccd"
+      }
+    ],
+    "metadata": "metadata---blockvault-blog-tags-hola-13-d-31f",
+    "listMetadata": "listMetadata---blockvault-blog-tags-holab-13-289",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/blog/welcome-ff7": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blockvault-blog-814-854",
+    "content": "content---blockvault-blog-welcomed-9-f-71a",
+    "__routeContextModule": "__routeContextModule---blockvault-blog-4-f-9-56e"
+  },
+  "/blockvault/markdown-page-643": {
+    "component": "component---theme-mdx-page-1-f-3-b90",
+    "content": "content---blockvault-markdown-page-393-a8a",
+    "__routeContextModule": "__routeContextModule---blockvault-markdown-page-9-f-8-5ca"
+  },
+  "/blockvault/docs-7c3": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---blockvault-docs-935-166",
+    "__routeContextModule": "__routeContextModule---blockvault-docsbee-dfa"
+  },
+  "/blockvault/docs/intro-f12": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---blockvault-docs-intro-0-e-3-ca9"
+  },
+  "/blockvault/docs/tutorial-basics/congratulations-d2d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---blockvault-docs-tutorial-basics-congratulations-822-4bf"
+  },
+  "/blockvault/docs/tutorial-basics/create-a-blog-post-e81": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---blockvault-docs-tutorial-basics-create-a-blog-post-533-8e2"
+  },
+  "/blockvault/docs/tutorial-basics/create-a-document-5eb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---blockvault-docs-tutorial-basics-create-a-document-1-e-4-e10"
+  },
+  "/blockvault/docs/tutorial-basics/create-a-page-cf3": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---blockvault-docs-tutorial-basics-create-a-page-5-c-8-10c"
+  },
+  "/blockvault/docs/tutorial-basics/deploy-your-site-517": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---blockvault-docs-tutorial-basics-deploy-your-sitef-55-0cf"
+  },
+  "/blockvault/docs/tutorial-basics/markdown-features-6e6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---blockvault-docs-tutorial-basics-markdown-features-18-c-658"
+  },
+  "/blockvault/docs/tutorial-extras/manage-docs-versions-1d2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---blockvault-docs-tutorial-extras-manage-docs-versionsdff-943"
+  },
+  "/blockvault/docs/tutorial-extras/translate-your-site-35f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---blockvault-docs-tutorial-extras-translate-your-sitee-44-3c0"
+  },
+  "/blockvault/-3d0": {
+    "component": "component---site-src-pages-index-jsc-4-f-f99",
+    "config": "config---blockvault-5-e-9-576",
+    "__routeContextModule": "__routeContextModule---blockvault-markdown-page-9-f-8-5ca"
+  }
+}
