@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import NavBar from '../components/Navbar-landing';
@@ -10,15 +10,17 @@ import hexagonOneDark from '../components/images/landingHexagon1Dark.svg';
 import hexagonTwoDark from '../components/images/landingHexagon2Dark.svg';
 
 const Index = () => {
-  var landingDesign;
+  const landingDesign = useRef();
   var hexagon1;
   var hexagon2;
   if (localStorage.theme === 'dark') {
-    landingDesign = landingLight;
+    console.log(localStorage.theme);
+    if(landingDesign.current) landingDesign.current.src = landingLight;
     hexagon1 = hexagonOneLight;
     hexagon2 = hexagonTwoLight;
   } else {
-    landingDesign = landingDark;
+    console.log(localStorage.theme);
+    if(landingDesign.current) landingDesign.current.src = landingDark;
     hexagon1 = hexagonOneDark;
     hexagon2 = hexagonTwoDark;
   }
@@ -26,7 +28,7 @@ const Index = () => {
   return (
     <>
       <div className="absolute top-0 right-0 bg-nord6 dark:bg-nord0 sm:hidden">
-        <img src={landingDesign} alt="landingDesign" />
+        <img src={landingLight} alt="landingDesign" ref={landingDesign}/>
       </div>
 
       <div className="absolute top-16 sm:hidden">
