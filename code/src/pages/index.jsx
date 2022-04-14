@@ -5,7 +5,6 @@ import NavBar from '../components/Navbar-landing';
 import landingDesign from '../components/images/landingDesign.svg';
 import hexagon1 from '../components/images/landinghexagon1.svg';
 import hexagon2 from '../components/images/landinghexagon2.svg';
-
 const Index = () => {
   return (
     <>
