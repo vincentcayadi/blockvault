@@ -7,24 +7,24 @@ import logo from './images/blackIconText.svg';
 import './navbar-hover.css';
 
 const Navbar = () => {
-  const icon = document.getElementById('icon');
-  if (localStorage.theme === 'dark'){
-    icon.src = darklighticon;
-  } else{
-    icon.src = lightdarkicon;
-  }
+  // const icon = document.getElementById('icon');
+  // if (localStorage.theme === 'dark'){
+  //   icon.src = darklighticon;
+  // } else{
+  //   icon.src = lightdarkicon;
+  // }
   const [showNav, setShowNav] = useState(false);
-  const toggletheme = () => {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = "light";
-      icon.src = lightdarkicon;
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = "dark";
-      icon.src = darklighticon;
-    }
-  };
+  // const toggletheme = () => {
+  //   if (document.documentElement.classList.contains('dark')) {
+  //     document.documentElement.classList.remove('dark');
+  //     localStorage.theme = "light";
+  //     icon.src = lightdarkicon;
+  //   } else {
+  //     document.documentElement.classList.add('dark');
+  //     localStorage.theme = "dark";
+  //     icon.src = darklighticon;
+  //   }
+  // };
   return (
     <nav className="sticky top-0 z-20 items-center justify-between px-10 py-4 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
       <div className="flex items-center justify-between">
@@ -61,7 +61,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <img src={darklighticon} onClick={toggletheme} id="icon"/>
+          <img src={darklighticon} id="icon"/>
         </li>
         <li className="items-center px-2 py-3 font-semibold text-center duration-300 py- rounded-xl bg-nord1 text-nord6 md:hover:scale-110">
           <Link className="p-8 md:p-4" exact to="/sign-in">
