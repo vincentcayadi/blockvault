@@ -31,10 +31,11 @@ const Navbar = () => {
       if(logoRef.current) logoRef.current.src = lightlogo;
     }
   };
+
   return (
     <nav className="sticky top-0 z-20 items-center justify-between px-10 py-4 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
       <div className="flex items-center justify-between">
-        <Link to="/" className="pl-8">
+        <Link to="/" className="pl-8 md-6">
           <img src={localStorage.theme === "dark" ? lightlogo : darklogo} className="w-full max-h-6" ref={logoRef}/>
         </Link>
         {showNav ? (
@@ -53,7 +54,7 @@ const Navbar = () => {
       <ul
         className={
           (showNav ? 'left-0' : '-left-full') +
-          ' md:static fixed bottom-0 top-12 md:flex md:space-x-7 items-center md:bg-transparent bg-nord3 bg-opacity-90 md:w-auto w-1/3 md:text-nord3 text-nord6 md:space-y-0 space-y-5 p-2 transition-left sm:p-7'
+          ' md:static fixed bottom-0 top-16 md:flex md:space-x-7 items-center md:bg-transparent bg-nord3 bg-opacity-90 md:w-auto w-full md:text-nord3 text-nord6 md:space-y-0 space-y-5 p-2 transition-left sm:p-7'
         }
       >
         <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
@@ -66,6 +67,8 @@ const Navbar = () => {
             Transactions
           </Link>
         </li>
+
+
         <li className="items-center px-2 py-3 font-semibold text-center duration-300 py- rounded-xl bg-nord1 text-nord6 md:hover:scale-110">
           <Link className="md:p-2" exact to="/sign-in">
             Get Started

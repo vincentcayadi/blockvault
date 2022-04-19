@@ -1,8 +1,12 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "flowbite": "^1.4.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.24"
+=======
+    "react-onclickoutside": "^6.12.1"
+>>>>>>> cc7ae8c750e7eeb14d1409dfe6638c01967b7f3c
   }
 }
