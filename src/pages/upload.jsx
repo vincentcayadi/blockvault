@@ -12,11 +12,15 @@ const Upload = () => {
 
   const [value, setValue] = useState("");
   
-  const fileInput = (e) => {
-    setFileTarget(e.target.files[0]);
-  }
-  
   const [setFileTarget] = useState("");
+  
+  // const fileInput = (e) => {
+  //   setFileTarget(e.target.files[0]);
+  // }
+  
+  function fileInputs(e) {
+    const fileInput = e.target.files[0];
+  }
   
   // const { saveFile } = useMoralisFile();
   // const handleSubmit = (event) => {
@@ -50,6 +54,7 @@ const Upload = () => {
     console.log(fileInput);
     
     const file = fileInput.files[0];
+    
     const uploadFile = new Moralis.File(fileName, file);
     await uploadFile.saveIPFS({useMasterKey:true});
     console.log(uploadFile.ipfs(),uploadFile.hash())
@@ -62,7 +67,7 @@ const Upload = () => {
         <div>Hello</div>
         <div>Wassa</div>
         <div>cock kim balls</div>
-        <input type="file" onChange={fileInput} />
+        <input type="file" />
         <Box component="form" noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
