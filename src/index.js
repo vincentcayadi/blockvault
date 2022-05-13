@@ -11,11 +11,11 @@ const root = createRoot(rootElement);
 root.render(
   <html class="p-0 m-0 bg-nord6 dark:bg-nord0">
     <React.StrictMode>
-      <BrowserRouter>
-        <MoralisProvider serverUrl="https://vev9tafmrwyn.usemoralis.com:2053/server" appId="DYIpOE4Is4ctxT6BZJNcieBeVh8sOM1Fb5R29Jay">
-          <App />
-        </MoralisProvider>      
-      </BrowserRouter>
+      <MoralisProvider serverUrl="https://vev9tafmrwyn.usemoralis.com:2053/server" appId="DYIpOE4Is4ctxT6BZJNcieBeVh8sOM1Fb5R29Jay">
+        <BrowserRouter>
+          <App />      
+        </BrowserRouter>
+      </MoralisProvider>
     </React.StrictMode>
   </html>
 );
