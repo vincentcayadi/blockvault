@@ -9,10 +9,14 @@ import Box from '@mui/material/Box';
 
 const Upload = () => {
   const { Moralis } = useMoralis();
+
+  const [value, setValue] = useState("");
   
-  const fileInput = (e) => setFileTarget(e.target.files[0]);
+  const fileInput = (e) => {
+    setFileTarget(e.target.files[0]);
+  }
   
-  const [fileTarget, setFileTarget] = useState("");
+  const [setFileTarget] = useState("");
   
   // const { saveFile } = useMoralisFile();
   // const handleSubmit = (event) => {
@@ -36,15 +40,19 @@ const Upload = () => {
     event.preventDefault();
     console.log("handleSubmit");
     console.log("event target: ", event.currentTarget);
-    const data = new FormData(event.currentTarget);
-    const fileName = data.get('fileName');
+    
+    const fileName = value;
     console.log({
       "fileName": fileName
     });
+    console.log("---")
+    
+    console.log(fileInput);
     
     const file = fileInput.files[0];
     const uploadFile = new Moralis.File(fileName, file);
-    await uploadFile.saveIPFS();
+    await uploadFile.saveIPFS({useMasterKey:true});
+    console.log(uploadFile.ipfs(),uploadFile.hash())
   }
   
   return (
@@ -64,6 +72,10 @@ const Upload = () => {
               label="File Name"
               name="fileName"
               autoFocus
+              value={value}
+              onChange={(e) => {
+                setValue(e.target.value);
+              }}
             />
         </Box>
         <form>
