@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 // Pages
 import Index from './pages/index';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/dashboard';
 import Upload from './pages/upload';
 import Transactions from './pages/transactions';
 import React from 'react';
