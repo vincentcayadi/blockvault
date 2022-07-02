@@ -49,7 +49,7 @@ const Navbar = () => {
     </nav>
   );
 };
-
+  
 // {
 //   /* <div className='px-4 cursor-pointer md:hidden' onClick={handleClick}>
 //                 <svg className='w-6 h-6'

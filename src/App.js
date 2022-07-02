@@ -30,33 +30,15 @@ function App() {
 
   // Whenever the user explicitly chooses to respect the OS preference
   // localStorage.removeItem('theme');
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Use fetch to get data from API or render the website https://www.youtube.com/watch?v=SR8755C0bME
-  }, []);
+
   return (
-    <div class="overflow-auto">
-      {loading ? (
-        <ReactLoading
-          type={'cubes'}
-          color={'FFFFF'}
-          height={'20%'}
-          width={'20%'}
-          loading={loading}
-        />
-      ) : (
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/pages/dashboard" element={<Dashboard />} />
-          <Route exact path="/pages/upload" element={<Upload />} />
-          <Route exact path="/pages/transactions" element={<Transactions />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      )}
-    </div>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/pages/dashboard" element={<Dashboard />} />
+      <Route exact path="/pages/upload" element={<Upload />} />
+      <Route exact path="/pages/transactions" element={<Transactions />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
 
