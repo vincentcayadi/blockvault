@@ -34,11 +34,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Index />} />
-        <Route exact path="/dashboard" element={<Dashboard />} />
-        <Route exact path="/upload" element={<Upload />} />
-        <Route exact path="/transactions" element={<Transactions />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={<Index />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </>
   );

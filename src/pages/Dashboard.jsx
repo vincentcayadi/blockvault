@@ -1,20 +1,16 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { useMoralis } from 'react-moralis';
 
 export default function Dashboard() {
-  const { user, account, Moralis } = useMoralis();
-  const username = user.get('ethAddress');
-
   return (
     <>
       <Navbar />
-      <body className="container select-none bg-nord6">
+      <div className="container select-none bg-nord6">
         <div className="flex w-full my-8 rounded-md bg-nord6">
           <div className="flex-auto p-4 rounded-md">
             <h1 className="text-2xl font-bold">Welcome back,</h1>
-            <p className="font-bold">{username}</p>
+            <p className="font-bold">BlockVault</p>
           </div>
           <div className="flex-auto p-2 border-2 rounded-md">
             <div className="border-2">Insert the transaction thingy here</div>
@@ -42,7 +38,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div>This is the grid</div>
-      </body>
+      </div>
       <Footer />
     </>
   );
