@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import vaultLight from '../components/images/vaultLight.svg';
-import vaultDark from '../components/images/vaultDark.svg';
+import vaultLight from '../images/vaultLight.svg';
+import vaultDark from '../images/vaultDark.svg';
 import Typical from 'react-typical';
 
 const Vault = () => {

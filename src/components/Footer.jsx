@@ -1,5 +1,5 @@
 import React from 'react';
-import ghl from '../components/images/ghl.png';
+import ghl from '../images/ghl.png';
 
 const Footer = () => {
   return (

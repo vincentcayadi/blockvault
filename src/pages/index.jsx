@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
-import Hero from '../components/Hero';
+import Hero from '../sections/Hero';
 import Footer from '../components/Footer';
 import NavBar from '../components/Navbar-landing';
-import landingLight from '../components/images/landingDesign.svg';
-import landingDark from '../components/images/landingDesignDark.svg';
-import hexagonOneLight from '../components/images/landinghexagon1Light.svg';
-import hexagonTwoLight from '../components/images/landinghexagon2Light.svg';
-import hexagonOneDark from '../components/images/landingHexagon1Dark.svg';
-import hexagonTwoDark from '../components/images/landingHexagon2Dark.svg';
+import landingLight from '../images/landingDesign.svg';
+import landingDark from '../images/landingDesignDark.svg';
+import hexagonOneLight from '../images/landinghexagon1Light.svg';
+import hexagonTwoLight from '../images/landinghexagon2Light.svg';
+import hexagonOneDark from '../images/landingHexagon1Dark.svg';
+import hexagonTwoDark from '../images/landingHexagon2Dark.svg';
 
 const Index = () => {
   const landingDesign = useRef();

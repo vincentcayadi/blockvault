@@ -1,34 +1,34 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from 'react-icons/hi';
-import darklighticon from './images/darklighttoggle.svg';
-import lightdarkicon from './images/lightdarktoggle.svg';
+import darklighticon from '../images/darklighttoggle.svg';
+import lightdarkicon from '../images/lightdarktoggle.svg';
 import darklogo from '../graphics/icontext/black-icontext.png';
-import lightlogo from '../graphics/icontext/eceff4-icontext.png'
+import lightlogo from '../graphics/icontext/eceff4-icontext.png';
 import './navbar-hover.css';
 
 const Navbar = () => {
   const iconRef = useRef();
   const logoRef = useRef();
-  if (localStorage.theme === 'dark'){
-    if(iconRef.current) iconRef.current.src = darklighticon;
-    if(logoRef.current) logoRef.current.src = lightlogo;
-  } else{
-    if(iconRef.current) iconRef.current.src = lightdarkicon;
-    if(logoRef.current) logoRef.current.src = darklogo;
+  if (localStorage.theme === 'dark') {
+    if (iconRef.current) iconRef.current.src = darklighticon;
+    if (logoRef.current) logoRef.current.src = lightlogo;
+  } else {
+    if (iconRef.current) iconRef.current.src = lightdarkicon;
+    if (logoRef.current) logoRef.current.src = darklogo;
   }
   const [showNav, setShowNav] = useState(false);
   const toggletheme = () => {
     if (document.documentElement.classList.contains('dark')) {
       document.documentElement.classList.remove('dark');
-      localStorage.theme = "light";
-      if(iconRef.current) iconRef.current.src = lightdarkicon;
-      if(logoRef.current) logoRef.current.src = darklogo;
+      localStorage.theme = 'light';
+      if (iconRef.current) iconRef.current.src = lightdarkicon;
+      if (logoRef.current) logoRef.current.src = darklogo;
     } else {
       document.documentElement.classList.add('dark');
-      localStorage.theme = "dark";
-      if(iconRef.current) iconRef.current.src = darklighticon;
-      if(logoRef.current) logoRef.current.src = lightlogo;
+      localStorage.theme = 'dark';
+      if (iconRef.current) iconRef.current.src = darklighticon;
+      if (logoRef.current) logoRef.current.src = lightlogo;
     }
   };
 
@@ -36,7 +36,11 @@ const Navbar = () => {
     <nav className="sticky top-0 z-20 items-center justify-between px-10 py-4 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
       <div className="flex items-center justify-between">
         <Link to="/" className="pl-8 md-6">
-          <img src={localStorage.theme === "dark" ? lightlogo : darklogo} className="w-full max-h-6" ref={logoRef}/>
+          <img
+            src={localStorage.theme === 'dark' ? lightlogo : darklogo}
+            className="w-full max-h-6"
+            ref={logoRef}
+          />
         </Link>
         {showNav ? (
           <HiOutlineMenuAlt3
@@ -68,14 +72,18 @@ const Navbar = () => {
           </Link>
         </li>
 
-
         <li className="items-center px-2 py-3 font-semibold text-center duration-300 py- rounded-xl bg-nord1 text-nord6 md:hover:scale-110">
           <Link className="md:p-2" exact to="/sign-in">
             Get Started
           </Link>
         </li>
         <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
-          <img src={localStorage.theme === "dark" ? darklighticon : lightdarkicon} ref={iconRef} onClick={toggletheme} className="m-auto"/>
+          <img
+            src={localStorage.theme === 'dark' ? darklighticon : lightdarkicon}
+            ref={iconRef}
+            onClick={toggletheme}
+            className="m-auto"
+          />
         </li>
       </ul>
     </nav>

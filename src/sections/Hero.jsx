@@ -1,7 +1,7 @@
 import React from 'react';
-import Vault from '../components/Vault';
-import LearnMore from '../components/LM';
-import Wallet from '../components/Wallet';
+import Vault from './Vault';
+import LearnMore from './LM';
+import Wallet from './Wallet';
 
 export const Hero = () => {
   return (
