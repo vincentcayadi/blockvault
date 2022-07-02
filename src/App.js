@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // Pages
 import Index from './pages/index';
 import Dashboard from './pages/Dashboard';
@@ -36,6 +36,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/transactions" element={<Transactions />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
