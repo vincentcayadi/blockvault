@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Pages
 import Index from './pages/index';
 import Dashboard from './pages/dashboard';
@@ -32,21 +32,15 @@ function App() {
   // localStorage.removeItem('theme');
 
   return (
-    <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/pages/dashboard" element={<Dashboard />} />
-      <Route exact path="/pages/upload" element={<Upload />} />
-      <Route exact path="/pages/transactions" element={<Transactions />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
-  );
-}
-
-function Home() {
-  return (
-    <>
-      <Index />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Index />} />
+        <Route exact path="dashboard" element={<Dashboard />} />
+        <Route exact path="upload" element={<Upload />} />
+        <Route exact path="transactions" element={<Transactions />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
