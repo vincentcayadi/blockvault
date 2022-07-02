@@ -9,7 +9,7 @@ import hexagonTwoLight from '../images/landinghexagon2Light.svg';
 import hexagonOneDark from '../images/landingHexagon1Dark.svg';
 import hexagonTwoDark from '../images/landingHexagon2Dark.svg';
 
-const Index = () => {
+export default function Index() {
   const landingDesign = useRef();
   var hexagon1;
   var hexagon2;
@@ -43,6 +43,4 @@ const Index = () => {
       <Footer />
     </>
   );
-};
-
-export default Index;
+}

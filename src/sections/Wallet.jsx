@@ -3,7 +3,7 @@ import metamask from '../images/metamask.svg';
 import phantom from '../images/phantom-icon-purple.svg';
 import { useMoralis } from 'react-moralis';
 
-function Wallet() {
+export default function Wallet() {
   const {
     authenticate,
     isAuthenticated,
@@ -102,17 +102,9 @@ function Wallet() {
             >
               Connect
             </button>
-            <button
-              onClick={logOut}
-              className="absolute px-10 py-4 duration-100 border-2 rounded-full bottom-12 left-12 bg-nord3 text-nord5 text-8 hover:bg-transparent hover:text-nord3 hover:border-nord3 dark:hover:bg-nord6 dark:border-nord2 dark:bg-nord2 dark:hover:border-nord6"
-            >
-              logout
-            </button>
           </div>
         </div>
       </section>
     </>
   );
 }
-
-export default Wallet;

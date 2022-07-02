@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LearnMore = () => {
+export default function LearnMore() {
   return (
     <>
       <section className="relative mb-60 lg:mb-80">
@@ -24,6 +24,4 @@ const LearnMore = () => {
       </section>
     </>
   );
-};
-
-export default LearnMore;
+}

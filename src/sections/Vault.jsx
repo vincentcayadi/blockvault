@@ -4,7 +4,7 @@ import vaultLight from '../images/vaultLight.svg';
 import vaultDark from '../images/vaultDark.svg';
 import Typical from 'react-typical';
 
-const Vault = () => {
+export default function Vault() {
   var vaultPic;
   if (localStorage.theme === 'dark') {
     vaultPic = vaultLight;
@@ -48,7 +48,7 @@ const Vault = () => {
             <div className="flex flex-wrap justify-center gap-6">
               <Link
                 exact
-                to="/dashboard"
+                to="./dashboard"
                 className="bg-nord1 text-white py-4 px-10 rounded-full text-8 shadow-xl hover:bg-transparent border-2 border-nord1 hover:text-nord1 hover:scale-110% duration-200 dark:border-nord0 dark:hover:bg-nord6 dark:hover:text-nord0 dark:border-2"
               >
                 Enter App
@@ -62,6 +62,4 @@ const Vault = () => {
       </section>
     </>
   );
-};
-
-export default Vault;
+}

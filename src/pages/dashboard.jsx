@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useMoralis } from 'react-moralis';
 
-const Dashboard = () => {
+export default function Dashboard() {
   const { user, account, Moralis } = useMoralis();
   const username = user.get('ethAddress');
 
@@ -46,6 +46,4 @@ const Dashboard = () => {
       <Footer />
     </>
   );
-};
-
-export default Dashboard;
+}
