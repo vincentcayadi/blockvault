@@ -31,17 +31,17 @@ const Navbar = () => {
         }
       >
         <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
-          <Link className="navbar-underline" to="/dashboard">
+          <Link className="navbar-underline" to="/pages/dashboard">
             Dashboard
           </Link>
         </li>
         <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
-          <Link className="navbar-underline" to="/upload">
+          <Link className="navbar-underline" to="/pages/upload">
             Upload
           </Link>
         </li>
         <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1">
-          <Link className="navbar-underline" to="/transactions">
+          <Link className="navbar-underline" to="/pages/transactions">
             Transactions
           </Link>
         </li>
