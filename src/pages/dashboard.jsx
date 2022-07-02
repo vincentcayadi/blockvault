@@ -4,11 +4,9 @@ import Footer from '../components/Footer';
 import { useMoralis } from 'react-moralis';
 
 const Dashboard = () => {
-  
   const { user, account, Moralis } = useMoralis();
-  const username = user.get("ethAddress");
-  
-  
+  const username = user.get('ethAddress');
+
   return (
     <>
       <Navbar />
@@ -20,7 +18,7 @@ const Dashboard = () => {
           </div>
           <div className="flex-auto p-2 border-2 rounded-md">
             <div className="border-2">Insert the transaction thingy here</div>
-            
+
             <div>Insert Gas Price Here:</div>
           </div>
         </div>
