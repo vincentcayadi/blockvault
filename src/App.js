@@ -1,11 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Pages
 import Index from './pages/index';
-import Dashboard from './pages/dashboard';
+import Dashboard from './pages/Dashboard';
 import Upload from './pages/upload';
 import Transactions from './pages/transactions';
-import React, { useState, useEffect } from 'react';
-import ReactLoading from 'react-loading';
+import React from 'react';
 import NotFoundPage from './pages/404';
 
 function App() {
@@ -31,16 +30,17 @@ function App() {
   // Whenever the user explicitly chooses to respect the OS preference
   // localStorage.removeItem('theme');
 
+  //console.log('This is the current window location' + window.location); //https://www.youtube.com/watch?v=SLfhMt5OUPI
   return (
-    <BrowserRouter>
+    <>
       <Routes>
         <Route exact path="/" element={<Index />} />
-        <Route exact path="dashboard" element={<Dashboard />} />
-        <Route exact path="upload" element={<Upload />} />
-        <Route exact path="transactions" element={<Transactions />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/upload" element={<Upload />} />
+        <Route exact path="/transactions" element={<Transactions />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 

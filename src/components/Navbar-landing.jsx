@@ -40,6 +40,7 @@ const Navbar = () => {
             src={localStorage.theme === 'dark' ? lightlogo : darklogo}
             className="w-full max-h-6"
             ref={logoRef}
+            alt="logo"
           />
         </Link>
         {showNav ? (
@@ -62,7 +63,7 @@ const Navbar = () => {
         }
       >
         <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
-          <Link className="navbar-underline" exact to="/dashboard">
+          <Link className="navbar-underline" to="/dashboard">
             Dashboard
           </Link>
         </li>
@@ -72,17 +73,13 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li className="items-center px-2 py-3 font-semibold text-center duration-300 py- rounded-xl bg-nord1 text-nord6 md:hover:scale-110">
-          <Link className="md:p-2" exact to="/sign-in">
-            Get Started
-          </Link>
-        </li>
         <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
           <img
             src={localStorage.theme === 'dark' ? darklighticon : lightdarkicon}
             ref={iconRef}
             onClick={toggletheme}
             className="m-auto"
+            alt="logo"
           />
         </li>
       </ul>

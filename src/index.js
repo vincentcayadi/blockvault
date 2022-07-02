@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import 'flowbite';
+import { BrowserRouter } from 'react-router-dom';
 import { MoralisProvider } from 'react-moralis';
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -14,7 +15,9 @@ root.render(
         serverUrl="https://vev9tafmrwyn.usemoralis.com:2053/server"
         appId="DYIpOE4Is4ctxT6BZJNcieBeVh8sOM1Fb5R29Jay"
       >
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </MoralisProvider>
     </React.StrictMode>
   </html>
