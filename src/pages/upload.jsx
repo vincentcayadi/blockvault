@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 
 
 const Upload = () => {
+  
   const { Moralis } = useMoralis();
 
   const [value, setValue] = useState("");
@@ -18,9 +19,9 @@ const Upload = () => {
   //   setFileTarget(e.target.files[0]);
   // }
   
-  function fileInputs(e) {
-    const fileInput = e.target.files[0];
-  }
+  // function fileInputs(e) {
+  //   const fileInput = e.target.files[0];
+  // }
   
   // const { saveFile } = useMoralisFile();
   // const handleSubmit = (event) => {
@@ -38,28 +39,59 @@ const Upload = () => {
     
   // };
 
+  var fileInput = "";
   
-  
-  const handleSubmit = async event => {
-    event.preventDefault();
-    console.log("handleSubmit");
-    console.log("event target: ", event.currentTarget);
-    
-    const fileName = value;
-    console.log({
-      "fileName": fileName
-    });
-    console.log("---")
-    
-    console.log(fileInput);
-    
-    const file = fileInput.files[0];
-    
-    const uploadFile = new Moralis.File(fileName, file);
-    await uploadFile.saveIPFS({useMasterKey:true});
-    console.log(uploadFile.ipfs(),uploadFile.hash())
+  function getFile() {
+    fileInput = document.getElementById('fileInput').files[0];
+    console.log("Get File: ", fileInput);
+  }
+  function readFile(input) {
+    const reader = new FileReader();
+    var fileData = reader.readAsDataURL(fileInput);
+    console.log(fileData)
   }
   
+  async function upload() {
+      const fileInput = document.getElementById('fileInput');
+      const data = fileInput.files[0];
+      const file = new Moralis.File(data.name, data);
+      console.log(file);
+      await file.saveIPFS({useMasterKey: true});
+      console.log(file.hash());
+      console.log(file.ipfs());
+    }
+    
+  
+  
+  // const handleSubmit = async event => {
+  //   event.preventDefault();
+  //   console.log("handleSubmit");
+  //   console.log("event target: ", event.currentTarget);
+    
+  //   // const fileName = value;
+  //   // console.log({
+  //   //   "fileName": fileName
+  //   // });
+    
+  //   console.log("---")
+    
+  //   getFile();
+
+
+    
+  
+    
+  //   console.log(fileInput);
+    
+  //   readFile(fileInput);
+    
+  //   const file = fileInput.files[0];
+    
+  //   const uploadFile = new Moralis.File(file.name, file);
+  //   await uploadFile.saveIPFS({useMasterKey:true});
+  //   console.log(uploadFile.ipfs(),uploadFile.hash())
+  // }
+   
   return (
     <>
       <Navbar />
@@ -67,8 +99,8 @@ const Upload = () => {
         <div>Hello</div>
         <div>Wassa</div>
         <div>cock kim balls</div>
-        <input type="file" />
-        <Box component="form" noValidate sx={{ mt: 1 }}>
+        <input type="file" id='fileInput'/>
+        {/* <Box component="form" noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -82,14 +114,14 @@ const Upload = () => {
                 setValue(e.target.value);
               }}
             />
-        </Box>
+        </Box> */}
         <form>
-        <input type="submit" onClick={handleSubmit} />
+        <button type="button" id="upload_file_button" onClick={upload}>Upload</button>
         </form>
-        
       </body>
     </>
   );
 }
+
 export default Upload;
 
