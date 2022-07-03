@@ -21,38 +21,38 @@ export default function Dashboard() {
       <div className="flex h-screen text-center">
         <div className="w-1/5 bg-nord4">
           <div className="w-1/2 mx-auto my-8 h-3/5">
-            <div className="px-2 py-4 bg-white border-white border-solid rounded-md drop-shadow-2xl">
+            <div className="px-2 py-4 bg-white border-white border-solid rounded-md drop-shadow-xl">
               <p className="pb-1 text-3xl font-bold">907</p>
               <p className="text-sm font-light">Files</p>
             </div>
-            <div className="grid w-full grid-cols-2 gap-2 mt-12 text-center gird-rows-2 justify-items-center">
+            <div className="grid w-full grid-cols-2 gap-4 mt-12 text-center gird-rows-2 justify-items-center">
               <Link exact to="/dashboard">
-                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-md bg-nord6 place-items-center hover:drop-shadow-xl">
+                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
                   <div>
                     <FiHome className="mx-auto" />
                   </div>
                 </div>
-                <p className="text-center font-sm">Home</p>
+                <p className="mt-2 text-center font-sm">Home</p>
               </Link>
               <Link exact to="/transactions">
-                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-md bg-nord6 place-items-center hover:drop-shadow-xl">
+                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
                   <FiClock className="mx-auto" />
                 </div>
-                <p className="text-center font-sm">History</p>
+                <p className="mt-2 text-center font-sm">History</p>
               </Link>
               <Link exact to="/upload">
-                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-md bg-nord6 place-items-center hover:drop-shadow-xl">
+                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
                   <div>
                     <FiUpload className="mx-auto" />
                   </div>
                 </div>
-                <p className="text-center font-sm">Upload</p>
+                <p className="mt-2 text-center font-sm">Upload</p>
               </Link>
               <Link exact to="Transactions">
-                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-md bg-nord6 place-items-center hover:drop-shadow-xl">
+                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
                   <FiClock className="mx-auto" />
                 </div>
-                <p className="text-center font-sm">History</p>
+                <p className="mt-2 text-center font-sm">History</p>
               </Link>
             </div>
             <div className="px-2 py-4 mt-12 rounded-md bg-nord6">
@@ -75,31 +75,36 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="w-full bg-nord5">
-          <p>Folders</p>
+        <div className="w-full h-full bg-nord5">
+          <p className="mx-4 my-2 text-lg font-semibold text-left">Folders</p>
           <div className="grid grid-cols-4">
             <div>Documents</div>
             <div>Images</div>
             <div>Music</div>
             <div>Videos</div>
           </div>
-          <p>Files</p>
-          <div className="grid grid-flow-row grid-cols-4 auto-rows-max">
+          <p className="mx-4 my-2 text-lg font-semibold text-left">Files</p>
+          <div className="grid grid-flow-row grid-cols-4 gird-rows-1">
             <div>Documents</div>
             <div>Images</div>
             <div>Music</div>
+            <div>Videos</div>
+          </div>
+          <p className="mx-4 my-2 text-lg font-semibold text-left">Starred</p>
+          <div className="grid grid-flow-row grid-cols-4 gird-rows-1">
             <div>Documents</div>
             <div>Images</div>
             <div>Music</div>
+            <div>Videos</div>
+          </div>
+          <p className="mx-4 my-2 text-lg font-semibold text-left">
+            Recently Added
+          </p>
+          <div className="grid grid-flow-row grid-cols-4 gird-rows-1">
             <div>Documents</div>
             <div>Images</div>
             <div>Music</div>
-            <div>Documents</div>
-            <div>Images</div>
-            <div>Music</div>
-            <div>Documents</div>
-            <div>Images</div>
-            <div>Music</div>
+            <div>Videos</div>
           </div>
         </div>
       </div>
