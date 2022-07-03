@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../components/Footer';
 import { RiHome6Fill } from 'react-icons/ri';
 import { FiClock } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
   return (
@@ -26,34 +27,34 @@ export default function Dashboard() {
               <p className="text-sm font-light">Files</p>
             </div>
             <div className="grid w-full grid-cols-2 gap-2 mt-12 text-center gird-rows-2 justify-items-center">
-              <div>
+              <Link exact to="/dashboard">
                 <div className="w-12 h-12 p-2 mx-auto rounded-md bg-nord0">
                   <div>
                     <RiHome6Fill className="mx-auto" />
                   </div>
                 </div>
-                <p className="font-sm">Dashboard</p>
-              </div>
-              <div>
+                <p className="text-center font-sm">Home</p>
+              </Link>
+              <Link exact to="/transactions">
                 <div className="w-12 h-12 p-2 mx-auto rounded-md bg-nord0">
                   <FiClock className="mx-auto" />
                 </div>
-                <p className="font-sm">History</p>
-              </div>
-              <div>
+                <p className="text-center font-sm">History</p>
+              </Link>
+              <Link exact to="/upload">
                 <div className="w-12 h-12 p-2 mx-auto rounded-md bg-nord0">
                   <div>
                     <RiHome6Fill className="mx-auto" />
                   </div>
                 </div>
-                <p className="font-sm">Upload</p>
-              </div>
-              <div>
+                <p className="text-center font-sm">Upload</p>
+              </Link>
+              <Link exact to="Transactions">
                 <div className="w-12 h-12 p-2 mx-auto rounded-md bg-nord0">
                   <FiClock className="mx-auto" />
                 </div>
-                <p className="font-sm">History</p>
-              </div>
+                <p className="text-center font-sm">History</p>
+              </Link>
             </div>
             <div className="px-2 py-4 mt-12 rounded-md bg-nord6">
               <span>Gas Prices(Gwei)</span>
@@ -75,7 +76,33 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="w-full bg-nord7"></div>
+        <div className="w-full bg-nord5">
+          <p>Folders</p>
+          <div className="grid grid-cols-4">
+            <div>Documents</div>
+            <div>Images</div>
+            <div>Music</div>
+            <div>Videos</div>
+          </div>
+          <p>Files</p>
+          <div className="grid grid-flow-row grid-cols-4 auto-rows-max">
+            <div>Documents</div>
+            <div>Images</div>
+            <div>Music</div>
+            <div>Documents</div>
+            <div>Images</div>
+            <div>Music</div>
+            <div>Documents</div>
+            <div>Images</div>
+            <div>Music</div>
+            <div>Documents</div>
+            <div>Images</div>
+            <div>Music</div>
+            <div>Documents</div>
+            <div>Images</div>
+            <div>Music</div>
+          </div>
+        </div>
       </div>
       <Footer />
     </>
