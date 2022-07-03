@@ -27,7 +27,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="absolute top-0 right-0 bg-nord6 dark:bg-nord0 sm:hidden">
+      <div className="absolute top-0 right-0 bg-nord6 sm:hidden">
         <img src={landingLight} alt="landingDesign" ref={landingDesign} />
       </div>
 
