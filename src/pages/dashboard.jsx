@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import { RiHome6Fill } from 'react-icons/ri';
-import { FiClock } from 'react-icons/fi';
+import { FiClock, FiUpload, FiHome } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
@@ -28,29 +27,29 @@ export default function Dashboard() {
             </div>
             <div className="grid w-full grid-cols-2 gap-2 mt-12 text-center gird-rows-2 justify-items-center">
               <Link exact to="/dashboard">
-                <div className="w-12 h-12 p-2 mx-auto rounded-md bg-nord0">
+                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-md bg-nord6 place-items-center hover:drop-shadow-xl">
                   <div>
-                    <RiHome6Fill className="mx-auto" />
+                    <FiHome className="mx-auto" />
                   </div>
                 </div>
                 <p className="text-center font-sm">Home</p>
               </Link>
               <Link exact to="/transactions">
-                <div className="w-12 h-12 p-2 mx-auto rounded-md bg-nord0">
+                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-md bg-nord6 place-items-center hover:drop-shadow-xl">
                   <FiClock className="mx-auto" />
                 </div>
                 <p className="text-center font-sm">History</p>
               </Link>
               <Link exact to="/upload">
-                <div className="w-12 h-12 p-2 mx-auto rounded-md bg-nord0">
+                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-md bg-nord6 place-items-center hover:drop-shadow-xl">
                   <div>
-                    <RiHome6Fill className="mx-auto" />
+                    <FiUpload className="mx-auto" />
                   </div>
                 </div>
                 <p className="text-center font-sm">Upload</p>
               </Link>
               <Link exact to="Transactions">
-                <div className="w-12 h-12 p-2 mx-auto rounded-md bg-nord0">
+                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-md bg-nord6 place-items-center hover:drop-shadow-xl">
                   <FiClock className="mx-auto" />
                 </div>
                 <p className="text-center font-sm">History</p>
