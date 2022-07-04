@@ -10,7 +10,7 @@ export default function Transactions() {
       <body className="container select-none bg-nord6">
         <div>Hello</div>
         <div></div>
-        <button id="btn-get-stats">Refresh Stats</button>
+        <button  id="btn-get-stats">Refresh Stats</button>
       </body>
       <Footer />
     </>
