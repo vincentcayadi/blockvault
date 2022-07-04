@@ -1,6 +1,5 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import { useMoralis } from 'react-moralis';
 
 export default function Transactions() {
   return (
