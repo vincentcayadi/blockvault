@@ -65,7 +65,7 @@ export default function Wallet() {
         <div className="grid grid-cols-2 gap-14">
           <div className="border-2 border-#DFDFDF rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow bg-nord5 dark:bg-nord3 dark:border-nord3">
             <h1 className="inline-block mb-6 mr-2 font-bold lg:text-2xl dark:text-nord6">
-              Metamask (Ethereum)
+              Metamask
             </h1>
             <img
               src={metamask}
@@ -86,7 +86,7 @@ export default function Wallet() {
           </div>
           <div className="relative p-12 text-left duration-300 border-2 rounded-xl h-96 hover:-translate-y-2 hover:shadow bg-nord5 dark:bg-nord3 dark:border-nord3">
             <h1 className="inline-block mb-6 mr-2 font-bold lg:text-2xl dark:text-nord6">
-              Phantom (Solana)
+              Phantom
             </h1>
             <img
               src={phantom}
