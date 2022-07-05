@@ -2,6 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import { useMoralisFile } from 'react-moralis';
 import { useMoralis } from 'react-moralis';
+import { FileUploader } from 'react-drag-drop-files';
+
+const fileTypes = ['JPEG', 'PNG', 'GIF'];
 
 const Upload = () => {
   const { Moralis } = useMoralis();
@@ -9,6 +12,11 @@ const Upload = () => {
   const [value, setValue] = useState('');
 
   const [setFileTarget] = useState('');
+
+  const [file, setFile] = useState(null);
+  const handleChange = (file) => {
+    setFile(file);
+  };
 
   // const fileInput = (e) => {
   //   setFileTarget(e.target.files[0]);
@@ -36,15 +44,15 @@ const Upload = () => {
 
   var fileInput = '';
 
-  function getFile() {
-    fileInput = document.getElementById('fileInput').files[0];
-    console.log('Get File: ', fileInput);
-  }
-  function readFile(input) {
-    const reader = new FileReader();
-    var fileData = reader.readAsDataURL(fileInput);
-    console.log(fileData);
-  }
+  // function getFile() {
+  //   fileInput = document.getElementById('fileInput').files[0];
+  //   console.log('Get File: ', fileInput);
+  // }
+  // function readFile(input) {
+  //   const reader = new FileReader();
+  //   var fileData = reader.readAsDataURL(fileInput);
+  //   console.log(fileData);
+  // }
 
   async function upload() {
     const fileInput = document.getElementById('fileInput');
@@ -83,12 +91,25 @@ const Upload = () => {
 
   return (
     <>
-      <body className="container">
-        <div>Hello</div>
-        <div>Wassa</div>
-        <div>cock kim balls</div>
-        <input type="file" id="fileInput" />
-        {/* <Box component="form" noValidate sx={{ mt: 1 }}>
+      <div className="grid w-screen h-screen place-items-center">
+        <div>
+          <form>
+            <FileUploader
+              label="Drag and drop your file here"
+              multiple={false}
+              handleChange={upload}
+              name="files"
+              types={fileTypes}
+            />
+            {console.log(file)}
+            <p>
+              {file ? `File name: ${file[0].name}` : 'No files uploaded yet'}
+            </p>
+            <button type="button" id="upload_file_button" onClick={upload}>
+              Upload
+            </button>
+          </form>
+          {/* <Box component="form" noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -103,12 +124,8 @@ const Upload = () => {
               }}
             />
         </Box> */}
-        <form>
-          <button type="button" id="upload_file_button" onClick={upload}>
-            Upload
-          </button>
-        </form>
-      </body>
+        </div>
+      </div>
     </>
   );
 };
