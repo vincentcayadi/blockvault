@@ -1,5 +1,4 @@
 import React from 'react';
-import ghl from '../images/ghl.png';
 
 const Footer = () => {
   return (
@@ -11,12 +10,6 @@ const Footer = () => {
         <p className="inline-block px-4 text-xs text-nord2/25 dark:text-nord6">
           Keep Your Data Secure
         </p>
-        <a
-          className="inline-block p-0 m-0"
-          href="https://github.com/Vincent-Cayadi/blockvault"
-        >
-          <img src={ghl} alt="github logo" />
-        </a>
       </div>
     </>
   );

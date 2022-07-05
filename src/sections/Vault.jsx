@@ -1,16 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import vaultLight from '../images/vaultLight.svg';
-import vaultDark from '../images/vaultDark.svg';
 import Typical from 'react-typical';
 
 export default function Vault() {
-  var vaultPic;
-  if (localStorage.theme === 'dark') {
-    vaultPic = vaultLight;
-  } else {
-    vaultPic = vaultDark;
-  }
   return (
     <>
       <section className="relative mb-60 lg:mb-80">
@@ -56,7 +49,7 @@ export default function Vault() {
             </div>
           </div>
           <div className="flex justify-center flex-1">
-            <img className="h-120" src={vaultPic} alt="vault" />
+            <img className="h-120" src={vaultLight} alt="vault" />
           </div>
         </div>
       </section>
