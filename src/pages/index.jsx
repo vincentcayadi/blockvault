@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Hero from '../sections/Hero';
 import Footer from '../components/Footer';
 import NavBar from '../components/Navbar-landing';

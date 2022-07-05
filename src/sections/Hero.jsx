@@ -5,7 +5,7 @@ import Wallet from './Wallet';
 
 export const Hero = () => {
   return (
-    <div class="select-none font-manrope subpixel-antialiased container bg-nord6 dark:bg-nord0 w-full overflow-x-hidden">
+    <div className="container w-full subpixel-antialiased select-none font-manrope bg-nord6 dark:bg-nord0">
       <Vault />
       <LearnMore />
       <Wallet />
