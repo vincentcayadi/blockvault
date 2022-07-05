@@ -22,11 +22,7 @@ export default function Wallet() {
         console.log('Logged in user:', user);
         console.log(user.get('ethAddress'));
       });
-      console.log('if runs').catch(function (error) {
-        console.log(error);
-      });
     }
-    console.log('outside if');
     console.log(!isAuthenticated);
   };
 
@@ -97,7 +93,7 @@ export default function Wallet() {
               Use Phantom to interact with the Solana blockchain
             </p>
             <button
-              onClick={loginPhantom}
+              onClick={logOut}
               className="absolute px-10 py-4 duration-100 border-2 rounded-full bottom-12 left-12 bg-nord3 text-nord5 text-8 hover:bg-transparent hover:text-nord3 hover:border-nord3 dark:hover:bg-nord6 dark:border-nord2 dark:bg-nord2 dark:hover:border-nord6"
             >
               Connect
