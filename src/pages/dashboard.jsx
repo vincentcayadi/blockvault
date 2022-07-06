@@ -70,15 +70,6 @@ export default function Dashboard() {
                 <p className="mt-2 text-center font-sm">History</p>
               </Link>
             </div>
-            <div className="px-2 py-4 mt-12 rounded-md bg-nord6">
-              <span>Gas Prices(Gwei)</span>
-              <div className="grid gap-2 gird-rows-2">
-                <div className="bg-nord5 drop-shadow-s">
-                  <span>ETH : 90Gwei</span>
-                </div>
-                <div>MATIC : 90Gwei</div>
-              </div>
-            </div>
           </div>
         </div>
         <div className="w-full h-full bg-nord5">
