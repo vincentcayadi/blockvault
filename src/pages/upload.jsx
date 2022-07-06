@@ -18,7 +18,7 @@ const Upload = () => {
     console.log("handleChange");
       fileInput = files;
     }
-    
+      
   async function upload() {
     console.log(fileInput);
     const data = fileInput;

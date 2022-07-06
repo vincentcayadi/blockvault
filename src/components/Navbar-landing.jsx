@@ -8,38 +8,39 @@ import lightlogo from '../graphics/icontext/eceff4-icontext.png';
 import './navbar-hover.css';
 
 const Navbar = () => {
-  const iconRef = useRef();
-  const logoRef = useRef();
-  if (localStorage.theme === 'dark') {
-    if (iconRef.current) iconRef.current.src = darklighticon;
-    if (logoRef.current) logoRef.current.src = lightlogo;
-  } else {
-    if (iconRef.current) iconRef.current.src = lightdarkicon;
-    if (logoRef.current) logoRef.current.src = darklogo;
-  }
+  // const iconRef = useRef();
+  // const logoRef = useRef();
+  // if (localStorage.theme === 'dark') {
+  //   if (iconRef.current) iconRef.current.src = darklighticon;
+  //   if (logoRef.current) logoRef.current.src = lightlogo;
+  // } else {
+  //   if (iconRef.current) iconRef.current.src = lightdarkicon;
+  //   if (logoRef.current) logoRef.current.src = darklogo;
+  // }
   const [showNav, setShowNav] = useState(false);
-  const toggletheme = () => {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
-      if (iconRef.current) iconRef.current.src = lightdarkicon;
-      if (logoRef.current) logoRef.current.src = darklogo;
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-      if (iconRef.current) iconRef.current.src = darklighticon;
-      if (logoRef.current) logoRef.current.src = lightlogo;
-    }
-  };
+  // const toggletheme = () => {
+  //   if (document.documentElement.classList.contains('dark')) {
+  //     document.documentElement.classList.remove('dark');
+  //     localStorage.theme = 'light';
+  //     if (iconRef.current) iconRef.current.src = lightdarkicon;
+  //     if (logoRef.current) logoRef.current.src = darklogo;
+  //   } else {
+  //     document.documentElement.classList.add('dark');
+  //     localStorage.theme = 'dark';
+  //     if (iconRef.current) iconRef.current.src = darklighticon;
+  //     if (logoRef.current) logoRef.current.src = lightlogo;
+  //   }
+  // };
 
   return (
     <nav className="sticky top-0 z-20 items-center justify-between px-10 py-4 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
       <div className="flex items-center justify-between">
         <Link to="/" className="pl-8 md-6">
           <img
-            src={localStorage.theme === 'dark' ? darklogo : lightlogo}
+            // src={localStorage.theme === 'dark' ? darklogo : lightlogo}
+            src={darklogo}
             className="w-full max-h-6"
-            ref={logoRef}
+            // ref={logoRef}
             alt="logo"
           />
         </Link>
@@ -73,7 +74,7 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
+        {/* <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
           <img
             src={localStorage.theme === 'dark' ? darklighticon : lightdarkicon}
             ref={iconRef}
@@ -81,7 +82,7 @@ const Navbar = () => {
             className="m-auto"
             alt="logo"
           />
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
