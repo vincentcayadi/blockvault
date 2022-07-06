@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <nav className="top-0 z-20 items-center justify-between px-10 py-10 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between z-10">
         <Link to="/" className="pl-8 md-6">
           <img
             // src={localStorage.theme === 'dark' ? darklogo : lightlogo}
