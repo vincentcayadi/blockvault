@@ -31,7 +31,7 @@ const Upload = () => {
 
   return (
     <>
-      <div className="grid w-screen h-screen place-items-center">
+      <div className="grid content-center w-screen h-screen place-items-center">
         <div>
           <form>
             <FileUploader
@@ -45,10 +45,13 @@ const Upload = () => {
               {file ? `File name: ${file[0].name}` : 'No files uploaded yet'}
             </p> */}
             {/* Can decide on whether to show the file name or not / let users choose their own file name using the Box textfield at Line 54 */}
-            
-            <button type="button" id="upload_file_button" onClick={upload}>
-              Upload
-            </button>
+            <div className="flex w-full">
+              <button type="button" id="upload_file_button" onClick={upload} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
+                Upload
+              </button>
+              
+            </div>
+           
             
           </form>
           {/* <Box component="form" noValidate sx={{ mt: 1 }}>
