@@ -35,14 +35,14 @@ const NotFoundPage = () => {
               <Link 
                 exact 
                 to="/" 
-                className="w-1/3 p-4 text-center bg-nord3 rounded-xl text-nord6 mx-auto"
+                className="w-1/3 p-4 text-center bg-nord3 rounded-xl text-nord6 mx-auto hover:bg-transparent hover:text-nord3 hover:border-nord3 hover:border-2"
               >
                 Homepage
               </Link>
               <Link 
                 exact 
                 to="/dashboard" 
-                className="w-1/3 p-4 text-center bg-nord3 rounded-xl text-nord6 mx-auto"
+                className="w-1/3 p-4 text-center bg-nord3 rounded-xl text-nord6 mx-auto hover:bg-transparent hover:text-nord3 hover:border-nord3 hover:border-2" 
               >
                 Dashboard
               </Link>

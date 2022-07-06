@@ -17,9 +17,9 @@ export default function Dashboard() {
     <>
       <div className="w-full px-4 text-center bg-nord4">
         <div className="flex items-center px-8 py-3">
-          <div className="w-1/6">
+          <Link exact to="/" className="w-1/6">
             <img className="w-3/4" src={logo} alt="logo"/>
-          </div>
+          </Link>
           <form className="w-3/4">
             <div>
               <input
