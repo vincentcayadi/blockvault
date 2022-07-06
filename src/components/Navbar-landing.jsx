@@ -33,7 +33,7 @@ const Navbar = () => {
   // };
 
   return (
-    <nav className="sticky top-0 z-20 items-center justify-between px-10 py-4 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
+    <nav className="top-0 z-20 items-center justify-between px-10 py-10 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
       <div className="flex items-center justify-between">
         <Link to="/" className="pl-8 md-6">
           <img
@@ -56,34 +56,6 @@ const Navbar = () => {
           />
         )}
       </div>
-
-      <ul
-        className={
-          (showNav ? 'left-0' : '-left-full') +
-          ' md:static fixed bottom-0 top-16 md:flex md:space-x-7 items-center md:bg-transparent bg-nord3 bg-opacity-90 md:w-auto w-full md:text-nord3 text-nord6 md:space-y-0 space-y-5 p-2 transition-left sm:p-7'
-        }
-      >
-        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
-          <Link className="navbar-underline" to="/dashboard">
-            Dashboard
-          </Link>
-        </li>
-        <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
-          <Link className="navbar-underline" exact to="/transactions">
-            Transactions
-          </Link>
-        </li>
-
-        {/* <li className="items-center py-4 text-center rounded-md md:p-0 sm:hover:bg-nord1 dark:text-nord6">
-          <img
-            src={localStorage.theme === 'dark' ? darklighticon : lightdarkicon}
-            ref={iconRef}
-            onClick={toggletheme}
-            className="m-auto"
-            alt="logo"
-          />
-        </li> */}
-      </ul>
     </nav>
   );
 };
