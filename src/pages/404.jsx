@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import landingLight from '../images/landingDesign.svg';
 import hexagonOneLight from '../images/landinghexagon1Light.svg';
 import logo from '../graphics/icon/black-icon.png';
-import logotext from '../graphics/icontext/black-icontext.png'
+import logotext from '../graphics/icontext/black-icontext.png';
+import Footer from '../components/Footer'
 // import hexagonTwoLight from '../images/landinghexagon2Light.svg';
 
 const NotFoundPage = () => {
@@ -51,6 +52,7 @@ const NotFoundPage = () => {
           
         </div>
       </div>
+      <Footer />
     </>
   );
 };
