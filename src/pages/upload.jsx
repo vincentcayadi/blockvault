@@ -9,16 +9,15 @@ const fileTypes = ['JPEG', 'PNG', 'GIF'];
 const Upload = () => {
   const { Moralis } = useMoralis();
 
-  
   const [file] = useState(null);
-  
-  var fileInput; 
-  
+
+  var fileInput;
+
   const handleChange = (files) => {
-    console.log("handleChange");
-      fileInput = files;
-    }
-      
+    console.log('handleChange');
+    fileInput = files;
+  };
+
   async function upload() {
     console.log(fileInput);
     const data = fileInput;
@@ -38,7 +37,7 @@ const Upload = () => {
               label="Drag and drop your file here"
               multiple={false}
               name="files"
-              types={fileTypes} 
+              types={fileTypes}
               handleChange={handleChange}
             />
             {/* <p>
@@ -46,13 +45,15 @@ const Upload = () => {
             </p> */}
             {/* Can decide on whether to show the file name or not / let users choose their own file name using the Box textfield at Line 54 */}
             <div className="flex w-full">
-              <button type="button" id="upload_file_button" onClick={upload} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
+              <button
+                type="button"
+                id="upload_file_button"
+                onClick={upload}
+                className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl"
+              >
                 Upload
               </button>
-              
             </div>
-           
-            
           </form>
           {/* <Box component="form" noValidate sx={{ mt: 1 }}>
             <TextField
