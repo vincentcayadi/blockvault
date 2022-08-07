@@ -108,7 +108,7 @@ const Upload = (props) => {
   }
 
   return (props.trigger) ? (
-    <div className="fixed top-0 left-0 w-full h-screen bg-nord5 flex justify-center items-center z-10">
+    <div className="fixed top-0 left-0 w-full h-screen bg-black-rgba flex justify-center items-center z-10">
         <div className="relative p-8 w-full max-w-2xl bg-nord4">
           <AiFillCloseCircle className="absolute top-0 right-0 cursor-pointer" onClick={() => props.setTrigger(false)} />
           <form>
