@@ -14,6 +14,13 @@ const Upload = () => {
   
   var fileInput; 
   
+  function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
   const handleChange = (files) => {
     console.log("handleChange");
       fileInput = files;
@@ -27,8 +34,48 @@ const Upload = () => {
     await file.saveIPFS({ useMasterKey: true });
     console.log(file.hash());
     console.log(file.ipfs());
+
+    let y = document.cookie;
+    let ya = y.split(";");
+    
+    let num = ya.length;
+    
+    let cookieName = "fileHash" + num;
+    console.log(cookieName);
+    setCookie(cookieName, file.ipfs(), 1);
+
+    console.log("----------------------------------------------------");
+    
+    getData("fileHash1");
+    
   }
 
+  function getData(cname) {
+      if (cname !== "fileHash1") {
+        cname = "fileHash1";
+        
+      }
+      console.log("getCookie");
+      let x = document.cookie;
+      let ca = x.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        console.log(cname)
+        let c = ca[i];
+
+        while (c.charAt(0) === ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(cname) == 0) {
+          let url = c.substring(cname.length + 1, c.length);
+          console.log("getCookie:" + url);
+          window.open(url, '_blank');
+        }
+      
+      }
+  }
+  
+  
+  
   return (
     <>
       <div className="grid content-center w-screen h-screen place-items-center">
@@ -52,7 +99,11 @@ const Upload = () => {
               
             </div>
            
-            
+          <button type="button" onClick={getData}>
+            Output Data
+          </button>
+
+          
           </form>
           {/* <Box component="form" noValidate sx={{ mt: 1 }}>
             <TextField

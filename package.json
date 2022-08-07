@@ -12,6 +12,7 @@
     "moralis": "^1.8.1",
     "nth-check": "^2.1.1",
     "postcss": "^8.4.12",
+    "querystring-es3": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-drag-drop-files": "^2.3.7",
