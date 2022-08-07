@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Footer from '../components/Footer';
 import { FiClock, FiUpload, FiHome } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
@@ -12,13 +13,17 @@ import monkeytype from '../images/monkeytype.png';
 import elecbill from '../images/elecbill.png';
 import bankreceipt from '../images/bankreceipt.png';
 
+import data from './data.js';
+import Upload from './upload.jsx';
+
 export default function Dashboard() {
+  const [buttonPopup, setButtonPopup] = useState(false);
   return (
     <>
       <div className="w-full px-4 text-center bg-nord4">
         <div className="flex items-center px-8 py-3">
           <Link exact to="/" className="w-1/6">
-            <img className="w-3/4" src={logo} alt="logo"/>
+            <img className="w-3/4" src={logo} alt="logo" />
           </Link>
           <form className="w-3/4">
             <div>
@@ -55,14 +60,31 @@ export default function Dashboard() {
                 </div>
                 <p className="mt-2 text-center font-sm">History</p>
               </Link>
-              <Link exact to="/upload">
+
+              {/* <Link exact to="/upload">
                 <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
                   <div>
                     <FiUpload className="mx-auto" />
                   </div>
                 </div>
                 <p className="mt-2 text-center font-sm">Upload</p>
-              </Link>
+              </Link> */}
+              <div>
+                <div
+                  className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  <div>
+                    <FiUpload className="mx-auto" />
+                  </div>
+                </div>
+                <p className="mt-2 text-center font-sm">Upload</p>
+                <Upload
+                  trigger={buttonPopup}
+                  setTrigger={setButtonPopup}
+                ></Upload>
+              </div>
+
               <Link exact to="Transactions">
                 <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
                   <FiClock className="mx-auto" />
@@ -72,7 +94,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="w-full h-full bg-nord5">
+        <div className="w-full h-full bg-nord5 z-0">
           <div className="my-4">
             <p className="mx-4 my-2 text-lg font-semibold text-left text-nord1 ">
               Folders
@@ -123,7 +145,28 @@ export default function Dashboard() {
 
           <p className="mx-4 my-2 text-lg font-semibold text-left">Files</p>
           <div className="grid grid-flow-row grid-cols-4 grid-rows-3 drop-shadow-lg">
-            <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
+            {data.map((data) => {
+              return (
+                <div className="w-auto mx-8 bg-white rounded-md h-36 color">
+                  <img
+                    className="w-full border-2 rounded-md h-1/3 border-gray-00"
+                    src={data.image}
+                  />
+                  <div className="w-full py-4 text-left px-7 text-nord1">
+                    {data.name}
+                  </div>
+                  <div className="flex justify-between">
+                    <div className="pb-4 text-sm px-7 text-nord1">
+                      {data.format}
+                    </div>
+                    <div className="pb-4 text-sm px-7 text-nord1">
+                      {data.size}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+            {/* <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
               <img
                 className="w-full border-2 rounded-md h-1/3 border-gray-00"
                 src={cat}
@@ -133,8 +176,8 @@ export default function Dashboard() {
                 <div className="pb-4 text-sm px-7 text-nord1">JPEG</div>
                 <div className="pb-4 text-sm px-7 text-nord1">2.4 MB</div>
               </div>
-            </div>
-            <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
+            </div> */}
+            {/* <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
               <img
                 className="w-full border-2 border-gray-500 rounded-md h-1/3"
                 src={essay}
@@ -272,24 +315,8 @@ export default function Dashboard() {
                 <div className="pb-4 text-sm px-7 text-nord1">PDF</div>
                 <div className="pb-4 text-sm px-7 text-nord1">40 KB</div>
               </div>
-            </div>
+            </div> */}
           </div>
-          {/* <p className="mx-4 my-2 text-lg font-semibold text-left">Starred</p>
-          <div className="grid grid-flow-row grid-cols-4 gird-rows-1">
-            <div>Documents</div>
-            <div>Images</div>
-            <div>Music</div>
-            <div>Videos</div>
-          </div>
-          <p className="mx-4 my-2 text-lg font-semibold text-left">
-            Recently Added
-          </p>
-          <div className="grid grid-flow-row grid-cols-4 gird-rows-1">
-            <div>Documents</div>
-            <div>Images</div>
-            <div>Music</div>
-            <div>Videos</div>
-          </div> */}
         </div>
       </div>
       <Footer />

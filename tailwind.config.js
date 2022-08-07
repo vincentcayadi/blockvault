@@ -13,6 +13,9 @@ module.exports = {
       textUnderlineOffset: {
         15: '15px',
       },
+      colors:{
+        'black-rgba':'rgba(0,0,0,0.4)',
+      }
     },
     fontFamily: {
       manrope: ['Manrope', 'sans-serif'],
