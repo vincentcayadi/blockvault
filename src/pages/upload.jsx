@@ -3,8 +3,12 @@ import { useState } from 'react';
 import { useMoralisFile } from 'react-moralis';
 import { useMoralis } from 'react-moralis';
 import { FileUploader } from 'react-drag-drop-files';
+import sha512 from 'crypto-js/sha512';
 
 const fileTypes = ['JPEG', 'PNG', 'GIF'];
+
+// var sha512 = require('js-sha512');
+
 
 const Upload = () => {
   const { Moralis } = useMoralis();
@@ -12,7 +16,7 @@ const Upload = () => {
   
   const [file] = useState(null);
   
-  var fileInput; 
+  var fileInput, hashFileInput; 
   
   function setCookie(cname, cvalue, exdays) {
     const d = new Date();
@@ -74,8 +78,33 @@ const Upload = () => {
       }
   }
   
+  const handleHashFileChange = (hashFile) => {
+    console.log("handleHashFileChange");
+      hashFileInput = hashFile;
+    }
   
-  
+  function fileHashing () {
+    console.log("fileHashing");
+    let fileReader = new FileReader();
+    fileReader.readAsDataURL(hashFileInput);
+    
+    fileReader.onload = function() {
+      let output = fileReader.result
+      
+        
+      while (output.charAt(0) !== ',') {
+        output = output.substring(1);
+      }
+      
+      output = output.substring(1);
+      console.log(hashFileInput.name);
+      console.log(output)
+      
+      var hash = (sha512(output)).toString();
+      console.log(hash)
+    };
+  }
+
   return (
     <>
       <div className="grid content-center w-screen h-screen place-items-center">
@@ -99,11 +128,24 @@ const Upload = () => {
               
             </div>
            
-          <button type="button" onClick={getData}>
+          <button type="button" onClick={getData} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
             Output Data
           </button>
-
+          <div>
+          <FileUploader
+              label="File for hashing"
+              multiple={false}
+              name="hashFile"
+              types={fileTypes} 
+              handleChange={handleHashFileChange}
+            />
+          </div>
           
+          <div>
+          <button type="button" id="upload_file_button" onClick={fileHashing} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
+            Hash File
+          </button>
+          </div>
           </form>
           {/* <Box component="form" noValidate sx={{ mt: 1 }}>
             <TextField
