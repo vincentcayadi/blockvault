@@ -12,6 +12,8 @@ import monkeytype from '../images/monkeytype.png';
 import elecbill from '../images/elecbill.png';
 import bankreceipt from '../images/bankreceipt.png';
 
+import data from './data.js';
+
 export default function Dashboard() {
   return (
     <>
@@ -123,7 +125,25 @@ export default function Dashboard() {
 
           <p className="mx-4 my-2 text-lg font-semibold text-left">Files</p>
           <div className="grid grid-flow-row grid-cols-4 grid-rows-3 drop-shadow-lg">
-            <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
+
+            {data.map(data =>{
+              return(
+                <div className="w-auto mx-8 bg-white rounded-md h-36 color">
+                  <img
+                    className="w-full border-2 rounded-md h-1/3 border-gray-00"
+                    src={data.image}
+                  />
+                  <div className="w-full py-4 text-left px-7 text-nord1">
+                    {data.name}
+                  </div>
+                  <div className="flex justify-between">
+                    <div className="pb-4 text-sm px-7 text-nord1">{data.format}</div>
+                    <div className="pb-4 text-sm px-7 text-nord1">{data.size}</div>
+                  </div>
+                </div>
+              )
+            })}
+            {/* <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
               <img
                 className="w-full border-2 rounded-md h-1/3 border-gray-00"
                 src={cat}
@@ -133,8 +153,8 @@ export default function Dashboard() {
                 <div className="pb-4 text-sm px-7 text-nord1">JPEG</div>
                 <div className="pb-4 text-sm px-7 text-nord1">2.4 MB</div>
               </div>
-            </div>
-            <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
+            </div> */}
+            {/* <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
               <img
                 className="w-full border-2 border-gray-500 rounded-md h-1/3"
                 src={essay}
@@ -272,24 +292,8 @@ export default function Dashboard() {
                 <div className="pb-4 text-sm px-7 text-nord1">PDF</div>
                 <div className="pb-4 text-sm px-7 text-nord1">40 KB</div>
               </div>
-            </div>
+            </div> */}
           </div>
-          {/* <p className="mx-4 my-2 text-lg font-semibold text-left">Starred</p>
-          <div className="grid grid-flow-row grid-cols-4 gird-rows-1">
-            <div>Documents</div>
-            <div>Images</div>
-            <div>Music</div>
-            <div>Videos</div>
-          </div>
-          <p className="mx-4 my-2 text-lg font-semibold text-left">
-            Recently Added
-          </p>
-          <div className="grid grid-flow-row grid-cols-4 gird-rows-1">
-            <div>Documents</div>
-            <div>Images</div>
-            <div>Music</div>
-            <div>Videos</div>
-          </div> */}
         </div>
       </div>
       <Footer />
