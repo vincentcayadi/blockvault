@@ -148,16 +148,20 @@ const Upload = (props) => {
 
   return (props.trigger) ? (
     <div className="fixed top-0 left-0 w-full h-screen bg-black-rgba flex justify-center items-center z-10">
-        <div className="relative p-8 w-full max-w-2xl bg-nord4">
-          <AiFillCloseCircle className="absolute top-0 right-0 cursor-pointer" onClick={() => props.setTrigger(false)} />
+        <div className="relative w-full max-w-2xl bg-nord5">
+          <AiFillCloseCircle className="absolute top-0 right-0 cursor-pointer m-4 w-6 h-6 text-nord1" onClick={() => props.setTrigger(false)} />
+          <h1 className="flex text-nord1 font-bold text-2xl self-start content-start p-8">Upload Files</h1>
           <form>
-            <FileUploader
-              label="Drag and drop your file here"
-              multiple={false}
-              name="files"
-              types={fileTypes} 
-              handleChange={handleChange}
-            />
+            <div className="px-8 py-2 h-24 color-nord1">
+              <FileUploader
+                label="Drag and drop your file here"
+                multiple={false}
+                name="files"
+                // types={fileTypes} 
+                handleChange={handleChange}
+              />
+            </div>
+            
             <div className="flex w-full">
               <button type="button" id="upload_file_button" onClick={upload} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
                 Upload
@@ -174,7 +178,7 @@ const Upload = (props) => {
               label="File for hashing"
               multiple={false}
               name="hashFile"
-              types={fileTypes} 
+              // types={fileTypes} 
               handleChange={handleHashFileChange}
             />
           </div>
