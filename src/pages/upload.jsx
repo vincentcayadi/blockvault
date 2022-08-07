@@ -3,12 +3,12 @@ import { useState } from 'react';
 import { useMoralisFile } from 'react-moralis';
 import { useMoralis } from 'react-moralis';
 import { FileUploader } from 'react-drag-drop-files';
-import sha512 from 'crypto-js/sha512';
+
 
 const fileTypes = ['JPEG', 'PNG', 'GIF'];
 
 // var sha512 = require('js-sha512');
-
+var CryptoJS = require( 'crypto-js' );
 
 const Upload = () => {
   const { Moralis } = useMoralis();
@@ -18,11 +18,20 @@ const Upload = () => {
   
   var fileInput, hashFileInput; 
   
-  function setCookie(cname, cvalue, exdays) {
+  function setCookie(cname, cvalue, exdays, imageKeyHash) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+
+    var cookieKey = CryptoJS.RIPEMD160(imageKeyHash).toString();  
+    
+    var encryptedCookie = CryptoJS.AES.encrypt(cvalue, cookieKey).toString();
+    
+    console.log(encryptedCookie)
+    // var yeet = CryptoJS.AES.decrypt(encryptedCookie, cookieKey).toString(CryptoJS.enc.Utf8);
+    // console.log(yeet);
+    document.cookie = cname + "=" + encryptedCookie + ";" + expires + ";path=/";
+    return cookieKey; 
   }
   
   const handleChange = (files) => {
@@ -31,12 +40,12 @@ const Upload = () => {
     }
       
   async function upload() {
-    console.log(fileInput);
+    // console.log(fileInput);
     const data = fileInput;
     const file = new Moralis.File(data.name, data);
-    console.log(file);
+    // console.log(file);
     await file.saveIPFS({ useMasterKey: true });
-    console.log(file.hash());
+    // console.log(file.hash());
     console.log(file.ipfs());
 
     let y = document.cookie;
@@ -45,35 +54,60 @@ const Upload = () => {
     let num = ya.length;
     
     let cookieName = "fileHash" + num;
-    console.log(cookieName);
-    setCookie(cookieName, file.ipfs(), 1);
+    // console.log(cookieName);
+
+    
+    var cookieKey = setCookie(cookieName, file.ipfs(), 1, fileHashing());
 
     console.log("----------------------------------------------------");
     
-    getData("fileHash1");
+    getData("fileHash1", cookieKey);
     
   }
 
-  function getData(cname) {
+
+  // function decryptCookie(encryptedCookie, cookieKey) {
+  //   console.log("decryptCookie function called")
+  //   var decryptedCookie = CryptoJS.AES.decrypt(encryptedCookie, cookieKey).toString(CryptoJS.enc.Utf8);
+  //   return decryptedCookie;
+  // }
+  
+  function getData(cname, cookieKey) {
       if (cname !== "fileHash1") {
         cname = "fileHash1";
-        
       }
-      console.log("getCookie");
+
+      console.log("getData function called");
+      
       let x = document.cookie;
       let ca = x.split(';');
+
+      console.log(ca);
       for (let i = 0; i < ca.length; i++) {
-        console.log(cname)
+        
         let c = ca[i];
 
-        while (c.charAt(0) === ' ') {
+        while (c.charAt(0) !== '=') {
           c = c.substring(1);
         }
-        if (c.indexOf(cname) == 0) {
-          let url = c.substring(cname.length + 1, c.length);
-          console.log("getCookie:" + url);
-          window.open(url, '_blank');
-        }
+        c = c.substring(1);
+
+        
+        console.log(c);
+        console.log(cookieKey);
+        var decryptedCookie = CryptoJS.AES.decrypt(c, cookieKey).toString(CryptoJS.enc.Utf8);
+        console.log(cname + ":" + decryptedCookie);
+        window.open(decryptedCookie, '_blank');
+        
+        
+        // while (c.charAt(0) === ' ') {
+        //   c = c.substring(1);
+        // }
+        // if (c.indexOf(cname) == 0) {
+        //   let url = c.substring(cname.length + 1, c.length);
+        //   console.log("getCookie:" + url);
+        //   window.open(url, '_blank');
+        // }
       
       }
   }
@@ -83,7 +117,7 @@ const Upload = () => {
       hashFileInput = hashFile;
     }
   
-  function fileHashing () {
+  function fileHashing() {
     console.log("fileHashing");
     let fileReader = new FileReader();
     fileReader.readAsDataURL(hashFileInput);
@@ -97,12 +131,17 @@ const Upload = () => {
       }
       
       output = output.substring(1);
-      console.log(hashFileInput.name);
-      console.log(output)
+      // console.log(hashFileInput.name);
+      // console.log(output)
       
-      var hash = (sha512(output)).toString();
-      console.log(hash)
+      var imageKeyHash = (CryptoJS.SHA512(output)).toString();
+      // console.log(hash)
+      return imageKeyHash;
     };
+
+  
+    
+    
   }
 
   return (
@@ -131,6 +170,7 @@ const Upload = () => {
           <button type="button" onClick={getData} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
             Output Data
           </button>
+          
           <div>
           <FileUploader
               label="File for hashing"
@@ -142,9 +182,9 @@ const Upload = () => {
           </div>
           
           <div>
-          <button type="button" id="upload_file_button" onClick={fileHashing} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
+          {/* <button type="button" id="upload_file_button" onClick={fileHashing} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
             Hash File
-          </button>
+          </button> */}
           </div>
           </form>
           {/* <Box component="form" noValidate sx={{ mt: 1 }}>
