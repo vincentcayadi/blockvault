@@ -5,12 +5,14 @@ import { useMoralis } from 'react-moralis';
 import { FileUploader } from 'react-drag-drop-files';
 import sha512 from 'crypto-js/sha512';
 
+import { AiFillCloseCircle } from 'react-icons/ai';
+
 const fileTypes = ['JPEG', 'PNG', 'GIF'];
 
 // var sha512 = require('js-sha512');
 
 
-const Upload = () => {
+const Upload = (props) => {
   const { Moralis } = useMoralis();
 
   
@@ -105,10 +107,10 @@ const Upload = () => {
     };
   }
 
-  return (
-    <>
-      <div className="grid content-center w-screen h-screen place-items-center">
-        <div>
+  return (props.trigger) ? (
+    <div className="fixed top-0 left-0 w-full h-screen bg-nord5 flex justify-center items-center z-10">
+        <div className="relative p-8 w-full max-w-2xl bg-nord4">
+          <AiFillCloseCircle className="absolute top-0 right-0 cursor-pointer" onClick={() => props.setTrigger(false)} />
           <form>
             <FileUploader
               label="Drag and drop your file here"
@@ -117,10 +119,6 @@ const Upload = () => {
               types={fileTypes} 
               handleChange={handleChange}
             />
-            {/* <p>
-              {file ? `File name: ${file[0].name}` : 'No files uploaded yet'}
-            </p> */}
-            {/* Can decide on whether to show the file name or not / let users choose their own file name using the Box textfield at Line 54 */}
             <div className="flex w-full">
               <button type="button" id="upload_file_button" onClick={upload} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
                 Upload
@@ -147,25 +145,10 @@ const Upload = () => {
           </button>
           </div>
           </form>
-          {/* <Box component="form" noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="fileName"
-              label="File Name"
-              name="fileName"
-              autoFocus
-              value={value}
-              onChange={(e) => {
-                setValue(e.target.value);
-              }}
-            />
-        </Box> */}
+
         </div>
       </div>
-    </>
-  );
+  ) : "";
 };
 
 export default Upload;
