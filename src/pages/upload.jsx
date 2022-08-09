@@ -6,12 +6,16 @@ import { FileUploader } from 'react-drag-drop-files';
 import './upload.css'
 
 
+import { dete } from './data';
+import { imageKeyHash } from './imagekey';
 import { AiFillCloseCircle } from 'react-icons/ai';
 
 const fileTypes = ['JPEG', 'PNG', 'GIF'];
-
+var fileHashed = false;
 // var sha512 = require('js-sha512');
 var CryptoJS = require( 'crypto-js' );
+export { fileHashed };
+
 
 const Upload = (props) => {
   const { Moralis } = useMoralis();
@@ -21,18 +25,19 @@ const Upload = (props) => {
   
   var fileInput, hashFileInput; 
   
-  function setCookie(cname, cvalue, exdays, imageKeyHash) {
+  function setCookie(cname, cvalue, cformat, csize, exdays, imageKeyHash) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
+    
+    cvalue = cvalue + "," + cformat + "," + csize;
 
     var cookieKey = CryptoJS.RIPEMD160(imageKeyHash).toString();  
     
     var encryptedCookie = CryptoJS.AES.encrypt(cvalue, cookieKey).toString();
     
     console.log(encryptedCookie)
-    // var yeet = CryptoJS.AES.decrypt(encryptedCookie, cookieKey).toString(CryptoJS.enc.Utf8);
-    // console.log(yeet);
+    
     document.cookie = cname + "=" + encryptedCookie + ";" + expires + ";path=/";
     return cookieKey; 
   }
@@ -43,7 +48,7 @@ const Upload = (props) => {
     }
       
   async function upload() {
-    // console.log(fileInput);
+    console.log(fileInput);
     const data = fileInput;
     const file = new Moralis.File(data.name, data);
     // console.log(file);
@@ -58,9 +63,23 @@ const Upload = (props) => {
     
     let cookieName = "fileHash" + num;
     // console.log(cookieName);
-
     
-    var cookieKey = setCookie(cookieName, file.ipfs(), 1, fileHashing());
+    let csize;
+    
+    if (data.size >= 1000000000) {
+      csize = (data.size / 1000000000).toFixed(2) + " GB";
+    }
+    else if (data.size >= 1000000) {
+      csize = (data.size / 1000000).toFixed(2) + " MB";
+    }
+    else if (data.size >= 1000) {
+      csize = (data.size / 1000).toFixed(2) + " KB";
+    }
+    else {
+      csize = data.size + " B";
+    }
+    
+    var cookieKey = setCookie(cookieName, file.ipfs(), data.type, csize, 1, imageKeyHash);
 
     console.log("----------------------------------------------------");
     
@@ -99,8 +118,29 @@ const Upload = (props) => {
         console.log(c);
         console.log(cookieKey);
         var decryptedCookie = CryptoJS.AES.decrypt(c, cookieKey).toString(CryptoJS.enc.Utf8);
-        console.log(cname + ":" + decryptedCookie);
-        window.open(decryptedCookie, '_blank');
+        console.log(decryptedCookie);
+        let n = 0;
+        while (decryptedCookie.charAt(n) !== ',') {
+          n = n + 1;
+        }
+        
+        let cfileLink = decryptedCookie.substring(0, n);
+        
+        let m = n + 1;
+        
+        while (decryptedCookie.charAt(m) !== ',') {
+          m = m + 1;
+        }
+        
+        let cformat = decryptedCookie.substring(n + 1, m);
+
+        let csize = decryptedCookie.substring(m + 1);
+        
+        
+
+        console.log(cname + ":" + cfileLink + "," + cformat + "," + csize);
+        console.log(dete);
+        window.open(cfileLink, '_blank');
         
         
         // while (c.charAt(0) === ' ') {
@@ -115,45 +155,50 @@ const Upload = (props) => {
       }
   }
   
-  const handleHashFileChange = (hashFile) => {
-    console.log("handleHashFileChange");
-      hashFileInput = hashFile;
-    }
+  // const handleHashFileChange = (hashFile) => {
+  //   console.log("handleHashFileChange");
+  //     hashFileInput = hashFile;
+  //   }
   
-  function fileHashing() {
-    console.log("fileHashing");
-    let fileReader = new FileReader();
-    fileReader.readAsDataURL(hashFileInput);
+  // function fileHashing() {
     
-    fileReader.onload = function() {
-      let output = fileReader.result
+  //   console.log("fileHashing");
+  //   let fileReader = new FileReader();
+  //   fileReader.readAsDataURL(hashFileInput);
+    
+  //   fileReader.onload = function() {
+  //     let output = fileReader.result
       
         
-      while (output.charAt(0) !== ',') {
-        output = output.substring(1);
-      }
+  //     while (output.charAt(0) !== ',') {
+  //       output = output.substring(1);
+  //     }
       
-      output = output.substring(1);
-      // console.log(hashFileInput.name);
-      // console.log(output)
+  //     output = output.substring(1);
+  //     // console.log(hashFileInput.name);
+  //     // console.log(output)
       
-      var imageKeyHash = (CryptoJS.SHA512(output)).toString();
-      // console.log(hash)
-      return imageKeyHash;
-    };
+  //     var imageKeyHash = (CryptoJS.SHA512(output)).toString();
+  //     // console.log(hash)
+  //     fileHashed = true;
+  //     return imageKeyHash;
+      
+  //   };
 
   
     
     
-  }
+  // }
 
   return (props.trigger) ? (
-    <div className="fixed top-0 left-0 w-full h-screen bg-black-rgba flex justify-center items-center z-10">
+
+    <div className="fixed top-0 left-0 z-10 flex items-center justify-center w-full h-screen bg-black-rgba">
         <div className="relative w-full max-w-2xl bg-nord5">
-          <AiFillCloseCircle className="absolute top-0 right-0 cursor-pointer m-4 w-6 h-6 text-nord1" onClick={() => props.setTrigger(false)} />
-          <h1 className="flex text-nord1 font-bold text-2xl self-start content-start p-8">Upload Files</h1>
+          <AiFillCloseCircle className="absolute top-0 right-0 w-6 h-6 m-4 cursor-pointer text-nord1" onClick={() => props.setTrigger(false)} />
+          <h1 className="flex content-start self-start p-8 text-2xl font-bold text-nord1">Upload Files</h1>
+
           <form>
-            <div className="px-8 py-2 w-full color-nord1">
+            <div className="h-24 px-8 py-2 color-nord1">
               <FileUploader
                 label="Drag and drop your file here"
                 multiple={false}
@@ -170,7 +215,7 @@ const Upload = (props) => {
               
             </div>
            
-          <button type="button" onClick={getData} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
+          {/* <button type="button" onClick={getData} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">
             Output Data
           </button>
           
@@ -182,7 +227,7 @@ const Upload = (props) => {
               // types={fileTypes} 
               handleChange={handleHashFileChange}
             />
-          </div>
+          </div> */}
           
           <div>
           {/* <button type="button" id="upload_file_button" onClick={fileHashing} className="content-center w-1/2 p-2 m-2 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl">

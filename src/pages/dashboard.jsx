@@ -12,12 +12,53 @@ import report from '../images/report.png';
 import monkeytype from '../images/monkeytype.png';
 import elecbill from '../images/elecbill.png';
 import bankreceipt from '../images/bankreceipt.png';
-
+import { imageKeyHash } from './imagekey';
 import data from './data.js';
+import { dete } from './data.js';
 import Upload from './upload.jsx';
+import { fileHashed } from './imagekey';
 
 export default function Dashboard() {
+  
   const [buttonPopup, setButtonPopup] = useState(false);
+  console.log(fileHashed);
+  console.log(imageKeyHash);
+  // create new data here by reading cookies
+  // and then use the data to create the dashboard
+  
+  // const dete = [];
+
+  // for (let i = 0; i < (document.cookie).length; i++) {
+  //   let cookie = {
+  //     image : '',
+  //     name : '',
+  //     format : '',
+  //     size : '',
+  //   };
+
+  //   let x = document.cookie;
+  //   let xa = x.split(";");
+    
+  //   let y = xa[i];
+  //   let ya = y.split(",");
+
+  //   console.log(ya);
+
+  //   cookie.image = ya[0];
+  //   cookie.name = ya[1];
+  //   cookie.format = ya[2];
+  //   cookie.size = ya[3];
+    
+  //   dete.push(cookie);
+  // }
+  
+
+  
+  
+
+
+
+  
   return (
     <>
       <div className="w-full px-4 text-center bg-nord4">
@@ -94,7 +135,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="w-full h-full bg-nord5 z-0">
+        <div className="z-0 w-full h-full bg-nord5">
           <div className="my-4">
             <p className="mx-4 my-2 text-lg font-semibold text-left text-nord1 ">
               Folders
@@ -145,22 +186,22 @@ export default function Dashboard() {
 
           <p className="mx-4 my-2 text-lg font-semibold text-left">Files</p>
           <div className="grid grid-flow-row grid-cols-4 grid-rows-3 drop-shadow-lg">
-            {data.map((data) => {
+            {dete.map((dete) => {
               return (
                 <div className="w-auto mx-8 bg-white rounded-md h-36 color">
                   <img
                     className="w-full border-2 rounded-md h-1/3 border-gray-00"
-                    src={data.image}
+                    src={dete.image}
                   />
                   <div className="w-full py-4 text-left px-7 text-nord1">
-                    {data.name}
+                    {dete.name}
                   </div>
                   <div className="flex justify-between">
                     <div className="pb-4 text-sm px-7 text-nord1">
-                      {data.format}
+                      {dete.format}
                     </div>
                     <div className="pb-4 text-sm px-7 text-nord1">
-                      {data.size}
+                      {dete.size}
                     </div>
                   </div>
                 </div>
