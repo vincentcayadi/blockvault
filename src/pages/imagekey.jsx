@@ -71,7 +71,6 @@ const ImageKey = (props) => {
               label="Submit file for Hashing"
               multiple={false}
               name="hashFile"
-              types={fileTypes} 
               handleChange={handleHashFileChange}
             />
           </div>
