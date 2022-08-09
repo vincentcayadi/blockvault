@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useMoralisFile } from 'react-moralis';
 import { useMoralis } from 'react-moralis';
 import { FileUploader } from 'react-drag-drop-files';
+import './upload.css'
 
 
 import { AiFillCloseCircle } from 'react-icons/ai';
@@ -152,7 +153,7 @@ const Upload = (props) => {
           <AiFillCloseCircle className="absolute top-0 right-0 cursor-pointer m-4 w-6 h-6 text-nord1" onClick={() => props.setTrigger(false)} />
           <h1 className="flex text-nord1 font-bold text-2xl self-start content-start p-8">Upload Files</h1>
           <form>
-            <div className="px-8 py-2 h-24 color-nord1">
+            <div className="px-8 py-2 w-full color-nord1">
               <FileUploader
                 label="Drag and drop your file here"
                 multiple={false}
