@@ -20,36 +20,21 @@ export default function LearnMore() {
                 <p className="text-2xl font-semibold">1</p>
               </div>
               <p className="mt-4 mb-2 text-xl font-bold">Authenticate</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
+              <p>Connect to your favourite Web3.0 Wallet</p>
             </div>
             <div className="p-4 rounded-md shadow-md bg-nord5">
               <div className="grid w-16 h-16 p-4 text-center rounded-full shadow-md bg-nord4 place-items-center">
                 <p className="text-2xl font-semibold">2</p>
               </div>
               <p className="mt-4 mb-2 text-xl font-bold">Encrypt</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
+              <p>Encrypt your data using a file hash</p>
             </div>
             <div className="p-4 rounded-md shadow-md bg-nord5">
               <div className="grid w-16 h-16 p-4 text-center rounded-full shadow-md bg-nord4 place-items-center">
                 <p className="text-2xl font-semibold">3</p>
               </div>
               <p className="mt-4 mb-2 text-xl font-bold">Upload</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
+              <p>Upload your data to IPFS</p>
             </div>
           </div>
         </div>

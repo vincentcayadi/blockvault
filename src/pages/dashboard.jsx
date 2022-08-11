@@ -83,7 +83,7 @@ export default function Dashboard() {
               <p className="pb-1 text-3xl font-bold">907</p>
               <p className="text-sm font-light">Files</p>
             </div>
-            <div className="grid w-full grid-cols-2 gap-4 mt-12 text-center gird-rows-2 justify-items-center">
+            <div className="grid w-full grid-cols-2 gap-4 mt-12 text-center justify-items-center">
               <Link exact to="/dashboard">
                 <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
                   <div>
@@ -92,13 +92,6 @@ export default function Dashboard() {
                 </div>
                 <p className="mt-2 text-center font-sm">Home</p>
               </Link>
-              <Link exact to="/transactions">
-                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
-                  <FiClock className="mx-auto" />
-                </div>
-                <p className="mt-2 text-center font-sm">History</p>
-              </Link>
-
               {/* <Link exact to="/upload">
                 <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
                   <div>
@@ -122,13 +115,6 @@ export default function Dashboard() {
                   setTrigger={setButtonPopup}
                 ></Upload>
               </div>
-
-              <Link exact to="Transactions">
-                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
-                  <FiClock className="mx-auto" />
-                </div>
-                <p className="mt-2 text-center font-sm">History</p>
-              </Link>
             </div>
           </div>
         </div>
