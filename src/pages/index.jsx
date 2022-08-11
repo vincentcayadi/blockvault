@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import NavBar from '../components/Navbar-landing';
 import landingLight from '../images/landingDesign.svg';
 import hexagonOneLight from '../images/landinghexagon1Light.svg';
+import hexagonTwoLight from '../images/landinghexagon2Light.svg';
 
 export default function Index() {
   return (
@@ -15,10 +16,9 @@ export default function Index() {
       <div className="absolute top-16 sm:hidden">
         <img src={hexagonOneLight} alt="hexagon1" />
       </div>
-{/* 
       <div className="hexagon">
         <img src={hexagonTwoLight} alt="hexagon2" />
-      </div> */}
+      </div>
       <NavBar />
       <Hero />
       <Footer />
