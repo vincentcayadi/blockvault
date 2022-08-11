@@ -58,7 +58,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className="w-full px-4 text-center bg-nord4">
+      <div className="w-full px-4 text-center ">
         <div className="flex items-center px-8 py-3">
           <Link exact to="/" className="w-1/6">
             <img className="w-3/4" src={logo} alt="logo" />
@@ -77,7 +77,7 @@ export default function Dashboard() {
       </div>
 
       <div className="flex h-screen text-center">
-        <div className="w-1/5 bg-nord4">
+        <div className="w-1/5 ">
           <div className="w-1/2 h-screen mx-auto my-8">
             <div className="px-2 py-4 bg-white border-white border-solid rounded-md drop-shadow-xl">
               <p className="pb-1 text-3xl font-bold">907</p>
@@ -118,12 +118,12 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="z-0 w-full h-full bg-nord5">
-          <div className="my-4">
-            <p className="mx-4 my-2 text-lg font-semibold text-left text-nord1 ">
+        <div className="z-0 w-full h-full ">
+          <div className="p-2 my-4">
+            <p className="mx-4 my-2 text-lg font-semibold text-left text-nord1">
               Folders
             </p>
-            <div className="w-full flex items-center justify-center text-center h-40 text-2xl font-bold text-nord5 bg-nord3 rounded-md">
+            <div className="flex items-center justify-center w-full h-40 text-2xl font-bold text-center rounded-md text-nord5 bg-nord3">
               Coming Soon
             </div>
             {/* <div className="grid grid-cols-4 drop-shadow-lg">
@@ -177,7 +177,7 @@ export default function Dashboard() {
             {dete.map((dete) => {
               return (
                 <a href={dete.image} target="_blank">
-                  <div className="w-auto mx-8 bg-white rounded-md h-40 color">
+                  <div className="w-auto h-40 mx-8 bg-white rounded-md color">
                     <img
                       className="w-full border-2 rounded-md h-1/3 border-gray-00"
                       src={dete.image}
@@ -195,7 +195,6 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </a>
-                
               );
             })}
             {/* <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
