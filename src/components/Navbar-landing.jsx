@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from 'react-icons/hi';
 import darklogo from '../graphics/icontext/black-icontext.png';
@@ -30,9 +30,9 @@ const Navbar = () => {
   // };
 
   return (
-    <nav className="top-0 z-20 items-center justify-between px-10 py-10 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
+    <nav className="container top-0 z-20 items-center justify-between px-10 py-10 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
       <div className="z-10 flex items-center justify-between">
-        <Link to="/" className="pl-8 md-6">
+        <Link to="/">
           <img
             // src={localStorage.theme === 'dark' ? darklogo : lightlogo}
             src={darklogo}
