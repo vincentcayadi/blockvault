@@ -1,10 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from 'react-icons/hi';
-import darklighticon from '../images/darklighttoggle.svg';
-import lightdarkicon from '../images/lightdarktoggle.svg';
 import darklogo from '../graphics/icontext/black-icontext.png';
-import lightlogo from '../graphics/icontext/eceff4-icontext.png';
 import './navbar-hover.css';
 
 const Navbar = () => {
@@ -34,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav className="top-0 z-20 items-center justify-between px-10 py-10 bg-opacity-0 select-none font-manrope md:flex bg-nord6">
-      <div className="flex items-center justify-between z-10">
+      <div className="z-10 flex items-center justify-between">
         <Link to="/" className="pl-8 md-6">
           <img
             // src={localStorage.theme === 'dark' ? darklogo : lightlogo}

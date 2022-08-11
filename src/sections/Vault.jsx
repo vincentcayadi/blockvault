@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import vaultLight from '../images/vaultLight.svg';
 import Typical from 'react-typical';
 import ImageKey from '../pages/imagekey';
@@ -40,7 +39,7 @@ export default function Vault() {
               With the help of BlockVault,
             </p>
             <p className="mb-6 font-medium lg:font-large ext-center lg:font-semibold lg:text-left text-nord3 dark:text-nord5">
-              you can store & send your data securely on the Blockchain.
+              you can store & save your data securely on the Blockchain.
             </p>
             <div>
             <div className="flex flex-wrap justify-center gap-6" >
