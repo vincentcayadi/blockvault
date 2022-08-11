@@ -5,16 +5,19 @@ import { useMoralis } from 'react-moralis';
 import { FileUploader } from 'react-drag-drop-files';
 import './upload.css';
 import { useDropzone } from 'react-dropzone';
-
-import { dete } from './data';
+import { fileHashed } from './imagekey';
+// import { dete } from './data';
 import { imageKeyHash } from './imagekey';
 import { AiFillCloseCircle } from 'react-icons/ai';
 
+export const dete = [];
+
 const fileTypes = ['JPEG', 'PNG', 'GIF'];
-var fileHashed = false;
-// var sha512 = require('js-sha512');
+
+
 var CryptoJS = require('crypto-js');
-export { fileHashed };
+
+
 
 const Upload = (props) => {
   var fileInput, hashFileInput;
@@ -27,12 +30,14 @@ const Upload = (props) => {
 
   const [file] = useState(null);
 
-  function setCookie(cname, cvalue, cformat, csize, exdays, imageKeyHash) {
+  
+  function setCookie(cname, cvalue, cformat, csize, exdays, imageKeyHash, fileName) {
+    console.log("-----------------setCookie-----------------");
     const d = new Date();
     d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
     let expires = 'expires=' + d.toUTCString();
 
-    cvalue = cvalue + ',' + cformat + ',' + csize;
+    cvalue = cvalue + ',' + fileName + ',' + cformat + ',' + csize + ',' + 'NotUpdated';
 
     var cookieKey = CryptoJS.RIPEMD160(imageKeyHash).toString();
 
@@ -41,6 +46,7 @@ const Upload = (props) => {
     console.log(encryptedCookie);
 
     document.cookie = cname + '=' + encryptedCookie + ';' + expires + ';path=/';
+    updateData(imageKeyHash);
     return cookieKey;
   }
 
@@ -50,6 +56,8 @@ const Upload = (props) => {
   };
 
   async function upload() {
+    updateData(imageKeyHash);
+    console.log("-----------------upload-----------------");
     console.log(fileInput);
     const data = fileInput;
     const file = new Moralis.File(data.name, data);
@@ -78,18 +86,17 @@ const Upload = (props) => {
       csize = data.size + ' B';
     }
 
-    var cookieKey = setCookie(
-      cookieName,
-      file.ipfs(),
-      data.type,
-      csize,
-      1,
-      imageKeyHash
-    );
+    console.log("Cookie Name: " + cookieName);
+    console.log("Cookie Link: " + file.ipfs());
+    // console.log("Cookie type: " + data.type);``
+    console.log("Cookie Size: " + csize);
+    console.log("Cookie Hash: " + imageKeyHash);
 
-    console.log('----------------------------------------------------');
+    var cookieKey = setCookie(cookieName, file.ipfs(), data.type, csize, 1, imageKeyHash, data.name);
 
-    getData('fileHash1', cookieKey);
+    
+
+    getData(cookieName, cookieKey);
   }
 
   // function decryptCookie(encryptedCookie, cookieKey) {
@@ -99,59 +106,81 @@ const Upload = (props) => {
   // }
 
   function getData(cname, cookieKey) {
-    if (cname !== 'fileHash1') {
-      cname = 'fileHash1';
-    }
+    
 
-    console.log('getData function called');
+    console.log("-----------------getData-----------------");
 
     let x = document.cookie;
     let ca = x.split(';');
 
     console.log(ca);
+    console.log(cname);
     for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
+      // let c = ca[i];
 
-      while (c.charAt(0) !== '=') {
-        c = c.substring(1);
-      }
-      c = c.substring(1);
-
-      console.log(c);
-      console.log(cookieKey);
-      var decryptedCookie = CryptoJS.AES.decrypt(c, cookieKey).toString(
-        CryptoJS.enc.Utf8
-      );
-      console.log(decryptedCookie);
-      let n = 0;
-      while (decryptedCookie.charAt(n) !== ',') {
-        n = n + 1;
-      }
-
-      let cfileLink = decryptedCookie.substring(0, n);
-
-      let m = n + 1;
-
-      while (decryptedCookie.charAt(m) !== ',') {
-        m = m + 1;
-      }
-
-      let cformat = decryptedCookie.substring(n + 1, m);
-
-      let csize = decryptedCookie.substring(m + 1);
-
-      console.log(cname + ':' + cfileLink + ',' + cformat + ',' + csize);
-      console.log(dete);
-      window.open(cfileLink, '_blank');
-
-      // while (c.charAt(0) === ' ') {
+      // while (c.charAt(0) !== '=') {
       //   c = c.substring(1);
       // }
-      // if (c.indexOf(cname) == 0) {
-      //   let url = c.substring(cname.length + 1, c.length);
-      //   console.log("getCookie:" + url);
-      //   window.open(url, '_blank');
-      // }
+      // c = c.substring(1);
+
+
+      let c = ca[i];
+      let e = 0;
+      while (c.charAt(e) !== '=') {
+        e++;
+      }
+      console.log(c.substring(1, e));
+      
+      if (c.substring(1, e) === cname ) {
+        console.log('cookie found');
+        console.log(c);
+        console.log(cookieKey);
+        
+        let cD = c.substring(e + 1);
+        console.log(cD);
+        var decryptedCookie = CryptoJS.AES.decrypt(cD, cookieKey).toString(CryptoJS.enc.Utf8);
+        
+        console.log(decryptedCookie);
+        
+        
+        // let n = 0;
+        // while (decryptedCookie.charAt(n) !== ',') {                   // get file link
+        //   n = n + 1;
+        // }
+        // let cfileLink = decryptedCookie.substring(0, n);
+
+        
+        // let m = n + 1;
+        // while (decryptedCookie.charAt(m) !== ',') {                   // get file name
+        //   m = m + 1;
+        // }
+        // let fileName = decryptedCookie.substring(n + 1, m);
+
+        // let o = m + 1;
+        // while (decryptedCookie.charAt(o) !== ',') {                   // get file format
+        //   o = o + 1;
+        // }
+        // let cformat = decryptedCookie.substring(m + 1, o);
+
+
+        let dCD = decryptedCookie.split(',');
+        
+        let cfileLink = dCD[0];
+        let fileName = dCD[1];
+        let cformat = dCD[2];
+        let csize = dCD[3];
+        let cstatus = dCD[4];
+        
+        
+        
+        console.log(cname + ':' + cfileLink + ',' + fileName + ',' + cformat + ',' + csize + ',' + cstatus);
+        console.log(dete);
+        window.open(cfileLink, '_blank');
+      }
+      
+      else {
+        console.log('cookie not found');
+      }
     }
   }
 
@@ -186,9 +215,83 @@ const Upload = (props) => {
 
   // }
   
+  function updateData(imageKeyHash) {
+    console.log("-----------------updateData-----------------");
+    if (fileHashed) {
+      
+      let x = document.cookie;
+      
+      let xa = x.split(";");
+      console.log(xa.length);
+      
+      for (let i = 0; i < xa.length; i++) {
+        
+        let c = xa[i];
+        let e = 0;
+        while (c.charAt(e) !== '=') {
+          e++;
+        }
+        console.log(c.substring(0, e));
+        
+        if (c.substring(e + 1) !== imageKeyHash) {
+          console.log("Not ImageKeyHash");
+          let cookie = {
+            image : '',
+            name : '',
+            format : '',
+            size : '',
+          };
+        
+          
+          let y = xa[i];
+          console.log(y);
+          while (y.charAt(0) !== '=') {
+            y = y.substring(1);
+          }
+          y = y.substring(1);
+          let cookieKey = CryptoJS.RIPEMD160(imageKeyHash).toString();
+          console.log(y);
+          console.log(cookieKey);
+          y = CryptoJS.AES.decrypt(y, cookieKey).toString(CryptoJS.enc.Utf8);
+        
+          let ya = y.split(",");
+        
+          console.log(ya);
+          
+          if (ya[4] === "NotUpdated") {
+            cookie.image = ya[0];
+            cookie.name = ya[1];
+            cookie.format = ya[2];
+            cookie.size = ya[3];
+            
+            console.log(cookie);
+            dete.push(cookie);
+            
+            let updatedCookieData = ya[0] + ',' + ya[1] + ',' + ya[2] + ',' + ya[3] + ',' + 'Updated';
+            updatedCookieData = CryptoJS.AES.encrypt(updatedCookieData, cookieKey).toString();
+            console.log(updatedCookieData);
+            const d = new Date();
+            d.setTime(d.getTime() + 1 * 24 * 60 * 60 * 1000);
+            let expires = 'expires=' + d.toUTCString();
+            document.cookie = c.substring(0, e) + '=' + updatedCookieData + ";" + expires + ';path=/';
+        }
+      else {
+        console.log("ImageKeyHash");
+        }
+      }
+  
+    }
+  }
+  else {
+      console.log("No file has been uploaded");
+    }
+    
+  }
+
+
   return props.trigger ? (
     <div className="fixed top-0 left-0 z-10 flex items-center justify-center w-full h-screen bg-black-rgba">
-      <div className="relative w-full max-w-2xl bg-nord6 rounded-md">
+      <div className="relative w-full max-w-2xl rounded-md bg-nord6">
         <AiFillCloseCircle
           className="absolute top-0 right-0 w-6 h-6 m-4 cursor-pointer text-nord1"
           onClick={() => props.setTrigger(false)}
@@ -208,7 +311,7 @@ const Upload = (props) => {
             />
           </div> */}
 
-          <section className="flex flex-col items-center p-5 border-2 rounded-lg border-dashed border-nord3 text-nord1 bg-nord5 mb-8 mx-8">
+          <section className="flex flex-col items-center p-5 mx-8 mb-8 border-2 border-dashed rounded-lg border-nord3 text-nord1 bg-nord5">
             <div {...getRootProps({className:"dropzone"})}>
               <input {...getInputProps()} />
               <p className="p-20">Drag and drop some files here, or click to select files</p>
@@ -220,7 +323,7 @@ const Upload = (props) => {
               type="button"
               id="upload_file_button"
               onClick={upload}
-              className="content-center w-1/2 p-2 mb-8 mx-auto duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl text-nord1"
+              className="content-center w-1/2 p-2 mx-auto mb-8 duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl text-nord1"
             >
               Upload
             </button>

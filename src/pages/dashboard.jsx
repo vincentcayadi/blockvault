@@ -12,9 +12,9 @@ import report from '../images/report.png';
 import monkeytype from '../images/monkeytype.png';
 import elecbill from '../images/elecbill.png';
 import bankreceipt from '../images/bankreceipt.png';
-import { imageKeyHash } from './imagekey';
+// import { imageKeyHash } from './imagekey';
 import data from './data.js';
-import { dete } from './data.js';
+import { dete } from './upload.jsx';
 import Upload from './upload.jsx';
 import { fileHashed } from './imagekey';
 
@@ -22,7 +22,10 @@ export default function Dashboard() {
   
   const [buttonPopup, setButtonPopup] = useState(false);
   console.log(fileHashed);
-  console.log(imageKeyHash);
+  console.log(dete);
+  
+  
+  // console.log(imageKeyHash);
   // create new data here by reading cookies
   // and then use the data to create the dashboard
   

@@ -1,4 +1,4 @@
-import { fileHashed } from './upload';
+import { fileHashed } from './imagekey';
 import { imageKeyHash } from './imagekey';
 
 var CryptoJS = require( 'crypto-js' );
