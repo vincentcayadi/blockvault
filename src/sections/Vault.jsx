@@ -18,7 +18,7 @@ export default function Vault() {
             <h1 className="mb-6 text-3xl font-extrabold text-center md:text-4 lg:text-5xl lg:text-left dark:text-nord6">
               Keep your data
             </h1>
-            <span className="mb-6 text-3xl font-extrabold text-center font-mr md:text-4 lg:text-5xl lg:text-left dark:text-nord6">
+            <span className="mb-8 text-3xl font-extrabold text-center font-mr md:text-4 lg:text-5xl lg:text-left dark:text-nord6">
               <Typical /*https://dev.to/davidamunga/how-to-create-a-text-typing-animation-effect-in-react-49gl */
                 steps={[
                   ' ',
