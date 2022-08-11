@@ -75,22 +75,21 @@ export default function Dashboard() {
           </form>
         </div>
       </div>
-
       <div className="flex h-screen text-center">
         <div className="w-1/5 ">
           <div className="w-1/2 h-screen mx-auto my-8">
             <div className="px-2 py-4 bg-white border-white border-solid rounded-md drop-shadow-xl">
-              <p className="pb-1 text-3xl font-bold">907</p>
-              <p className="text-sm font-light">Files</p>
+              <p className="pb-1 text-3xl font-bold sm:text-xl">907</p>
+              <p className="text-base font-light sm:text-xs">Files</p>
             </div>
-            <div className="grid w-full grid-cols-2 gap-4 mt-12 text-center justify-items-center">
+            <div className="grid w-full grid-cols-2 gap-4 mt-12 text-center sm:grid-cols-1 justify-items-center">
               <Link exact to="/dashboard">
                 <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
                   <div>
                     <FiHome className="mx-auto" />
                   </div>
                 </div>
-                <p className="mt-2 text-center font-sm">Home</p>
+                <p className="mt-2 text-sm text-center sm:text-xs">Home</p>
               </Link>
               {/* <Link exact to="/upload">
                 <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
@@ -109,7 +108,7 @@ export default function Dashboard() {
                     <FiUpload className="mx-auto" />
                   </div>
                 </div>
-                <p className="mt-2 text-center font-sm">Upload</p>
+                <p className="mt-2 text-sm text-center sm:text-xs">Upload</p>
                 <Upload
                   trigger={buttonPopup}
                   setTrigger={setButtonPopup}
