@@ -19,16 +19,14 @@ import Upload from './upload.jsx';
 import { fileHashed } from './imagekey';
 
 export default function Dashboard() {
-  
   const [buttonPopup, setButtonPopup] = useState(false);
   console.log(fileHashed);
   console.log(dete);
-  
-  
+
   // console.log(imageKeyHash);
   // create new data here by reading cookies
   // and then use the data to create the dashboard
-  
+
   // const dete = [];
 
   // for (let i = 0; i < (document.cookie).length; i++) {
@@ -41,7 +39,7 @@ export default function Dashboard() {
 
   //   let x = document.cookie;
   //   let xa = x.split(";");
-    
+
   //   let y = xa[i];
   //   let ya = y.split(",");
 
@@ -51,17 +49,13 @@ export default function Dashboard() {
   //   cookie.name = ya[1];
   //   cookie.format = ya[2];
   //   cookie.size = ya[3];
-    
+
   //   dete.push(cookie);
   // }
-  
 
-  
-  
+  const truncate = (input) =>
+    input?.length > 25 ? `${input.substring(0, 22)}...` : input;
 
-
-
-  
   return (
     <>
       <div className="w-full px-4 text-center bg-nord4">
@@ -143,7 +137,10 @@ export default function Dashboard() {
             <p className="mx-4 my-2 text-lg font-semibold text-left text-nord1 ">
               Folders
             </p>
-            <div className="grid grid-cols-4 drop-shadow-lg">
+            <div className="w-full flex items-center justify-center text-center h-40 text-2xl font-bold text-nord5 bg-nord3 rounded-md">
+              Coming Soon
+            </div>
+            {/* <div className="grid grid-cols-4 drop-shadow-lg">
               <div className="w-auto mx-8 bg-white rounded-md h-36 color">
                 <div className="w-6 h-6 bg-blue-300 rounded-full mt-7 ml-7"></div>
                 <div className="w-full py-4 text-left px-7 text-nord1">
@@ -184,30 +181,35 @@ export default function Dashboard() {
                   <div className="pb-4 text-sm px-7 text-nord1">12 GB</div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          <p className="mx-4 my-2 text-lg font-semibold text-left">Files</p>
+          <p className="mx-4 my-2 text-lg font-semibold text-left text-nord1">
+            Files
+          </p>
           <div className="grid grid-flow-row grid-cols-4 grid-rows-3 drop-shadow-lg">
             {dete.map((dete) => {
               return (
-                <div className="w-auto mx-8 bg-white rounded-md h-36 color">
-                  <img
-                    className="w-full border-2 rounded-md h-1/3 border-gray-00"
-                    src={dete.image}
-                  />
-                  <div className="w-full py-4 text-left px-7 text-nord1">
-                    {dete.name}
-                  </div>
-                  <div className="flex justify-between">
-                    <div className="pb-4 text-sm px-7 text-nord1">
-                      {dete.format}
+                <a href={dete.image} target="_blank">
+                  <div className="w-auto mx-8 bg-white rounded-md h-40 color">
+                    <img
+                      className="w-full border-2 rounded-md h-1/3 border-gray-00"
+                      src={dete.image}
+                    />
+                    <div className="w-full py-4 text-left px-7 text-nord1">
+                      {truncate(dete.name)}
                     </div>
-                    <div className="pb-4 text-sm px-7 text-nord1">
-                      {dete.size}
+                    <div className="flex justify-between">
+                      <div className="pb-4 text-sm px-7 text-nord1">
+                        {dete.format}
+                      </div>
+                      <div className="pb-4 text-sm px-7 text-nord1">
+                        {dete.size}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
+                
               );
             })}
             {/* <div className="w-auto mx-8 mb-8 bg-white rounded-md h-36">
