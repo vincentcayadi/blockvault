@@ -35,29 +35,26 @@ export default function Vault() {
                 loop={Infinity}
               />
             </span>
-            <p className="font-medium text-center lg:font-large lg:font-semibold lg:text-left text-nord3 dark:text-nord5">
-              With the help of BlockVault,
-            </p>
-            <p className="mb-6 font-medium lg:font-large ext-center lg:font-semibold lg:text-left text-nord3 dark:text-nord5">
-              you can store & save your data securely on the Blockchain.
-            </p>
             <div>
-            <div className="flex flex-wrap justify-center gap-6" >
-              {/* <Link
+              <div className="flex flex-wrap justify-center gap-6">
+                {/* <Link
                 exact
                 to="./dashboard"
                 className="bg-nord1 text-white py-4 px-10 rounded-full text-8 shadow-xl hover:bg-transparent border-2 border-nord1 hover:text-nord1 hover:scale-110% duration-200 dark:border-nord0 dark:hover:bg-nord6 dark:hover:text-nord0 dark:border-2"
               >
                 Enter App
               </Link> */}
-              <p className="bg-nord1 text-white py-4 px-10 rounded-full text-8 shadow-xl hover:bg-transparent border-2 border-nord1 hover:text-nord1 hover:scale-110% duration-200 dark:border-nord0 dark:hover:bg-nord6 dark:hover:text-nord0 dark:border-2" onClick={() => setButtonPopup(true)}>
-                Enter App
-              </p>
-              <ImageKey
-                trigger={buttonPopup}
-                setTrigger={setButtonPopup}
-              ></ImageKey>
-            </div>
+                <p
+                  className="bg-nord1 text-white py-4 px-10 rounded-full text-8 shadow-xl hover:bg-transparent border-2 border-nord1 hover:text-nord1 hover:scale-110% duration-200 dark:border-nord0 dark:hover:bg-nord6 dark:hover:text-nord0 dark:border-2"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Enter App
+                </p>
+                <ImageKey
+                  trigger={buttonPopup}
+                  setTrigger={setButtonPopup}
+                ></ImageKey>
+              </div>
             </div>
           </div>
           <div className="flex justify-center flex-1">
