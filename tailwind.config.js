@@ -13,9 +13,9 @@ module.exports = {
       textUnderlineOffset: {
         15: '15px',
       },
-      colors:{
-        'black-rgba':'rgba(0,0,0,0.4)',
-      }
+      colors: {
+        'black-rgba': 'rgba(0,0,0,0.4)',
+      },
     },
     fontFamily: {
       manrope: ['Manrope', 'sans-serif'],
@@ -23,7 +23,6 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: '1rem',
       screens: {
         xl: '1200px',
         '2xl': '1400px',

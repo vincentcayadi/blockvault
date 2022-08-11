@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import landingLight from '../images/landingDesign.svg';
 import hexagonOneLight from '../images/landinghexagon1Light.svg';
-import Footer from '../components/Footer';
 
 const NotFoundPage = () => {
   return (
