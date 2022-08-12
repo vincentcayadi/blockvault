@@ -17,6 +17,7 @@ import data from './data.js';
 import { dete } from './upload.jsx';
 import Upload from './upload.jsx';
 import { fileHashed } from './imagekey';
+import { IconContext } from 'react-icons';
 
 export default function Dashboard() {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -84,12 +85,13 @@ export default function Dashboard() {
             </div>
             <div className="grid w-full grid-cols-2 gap-4 mt-12 text-center sm:grid-cols-1 justify-items-center">
               <Link exact to="/dashboard">
-                <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
-                  <div>
-                    <FiHome className="mx-auto" />
-                  </div>
+                <div className="grid w-12 h-12 p-2 mx-auto duration-200 border rounded-md drop-shadow-lg bg-nord6 place-items-center hover:scale-125">
+                  <IconContext.Provider value={{ size: '1.2rem' }}>
+                    <div>
+                      <FiHome className="mx-auto" />
+                    </div>
+                  </IconContext.Provider>
                 </div>
-                <p className="mt-2 text-sm text-center sm:text-xs">Home</p>
               </Link>
               {/* <Link exact to="/upload">
                 <div className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl">
@@ -101,14 +103,15 @@ export default function Dashboard() {
               </Link> */}
               <div>
                 <div
-                  className="grid w-12 h-12 p-2 mx-auto duration-200 rounded-md shadow-lg bg-nord6 place-items-center hover:drop-shadow-xl"
+                  className="grid w-12 h-12 p-2 mx-auto duration-200 border rounded-md drop-shadow-lg bg-nord6 place-items-center hover:scale-125"
                   onClick={() => setButtonPopup(true)}
                 >
-                  <div>
-                    <FiUpload className="mx-auto" />
-                  </div>
+                  <IconContext.Provider value={{ size: '1.2rem' }}>
+                    <div>
+                      <FiUpload className="mx-auto" />
+                    </div>
+                  </IconContext.Provider>
                 </div>
-                <p className="mt-2 text-sm text-center sm:text-xs">Upload</p>
                 <Upload
                   trigger={buttonPopup}
                   setTrigger={setButtonPopup}
