@@ -55,7 +55,7 @@ export default function Wallet() {
       </h1>
       <p className="mb-6 text-center lg:text-xl dark:text-nord5">
         BlockVault provides support for some commonly use crypto wallets for
-        authentication and login
+        authentication
       </p>
       <section className="relative">
         <div className="grid grid-cols-2 gap-14">
@@ -68,9 +68,7 @@ export default function Wallet() {
               className="inline-block w-10 h-10"
               alt="MetaMask"
             />
-            <p className="dark:text-nord5">
-              Use Metamask to interact with the Ethereum, Polygon blockchain
-            </p>
+            <p className="dark:text-nord5">Connect Using MetaMask</p>
             <div>
               <button
                 onClick={loginMetaMask}
