@@ -3,8 +3,8 @@ import React from 'react';
 export default function LearnMore() {
   return (
     <>
-      <section className="relative mb-60 lg:mb-80">
-        <div className="flex flex-col">
+      <div className="h-screen">
+        <div className="flex flex-col ">
           <h1 className="mb-6 text-3xl font-bold text-center md:text-4 lg:text-4xl text-nord0 ">
             Say hello to decentralized storage
           </h1>
@@ -38,7 +38,7 @@ export default function LearnMore() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

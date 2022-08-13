@@ -17,7 +17,7 @@ export default function Index() {
         <img src={hexagonOneLight} alt="hexagon1" />
       </div>
       <div className="hexagon">
-        <img src={hexagonTwoLight} alt="hexagon2" />
+       <img src={hexagonTwoLight} alt="hexagon2" />
       </div>
       <NavBar />
       <Hero />

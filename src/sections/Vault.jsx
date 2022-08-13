@@ -9,9 +9,10 @@ export default function Vault() {
 
   return (
     <>
-      <section className="relative h-full mb-60 lg:mb-80">
-        <div className="flex flex-col-reverse items-center gap-12 lg:flex-row mt-14 lg:mt-28">
-          <div className="flex flex-col items-center flex-1 pl-8 lg:items-start">
+      <section className="relative h-screen">
+        <div className="flex flex-col-reverse items-center gap-12 sm:flex-row">
+          <div></div>
+          <div className="flex flex-col items-center flex-1 lg:items-start">
             <h1 className="mb-6 text-3xl font-extrabold text-center md:text-4 lg:text-5xl lg:text-left dark:text-nord6">
               BlockVault
             </h1>
