@@ -9,11 +9,11 @@ import hexagonTwoLight from '../images/landinghexagon2Light.svg';
 export default function Index() {
   return (
     <>
-      <div className="absolute top-0 right-0 z-0 bg-nord6 sm:hidden">
+      <div className="absolute top-0 right-0 z-0 invisible bg-nord6 sm:visible">
         <img src={landingLight} alt="landingDesign" />
       </div>
 
-      <div className="absolute top-16 sm:hidden">
+      <div className="absolute invisible top-16 sm:visible">
         <img src={hexagonOneLight} alt="hexagon1" />
       </div>
       <div className="hexagon">
