@@ -51,19 +51,19 @@ export default function Wallet() {
   return (
     <>
       <div>
-        <h1 className="mb-8 text-3xl font-bold text-center md:text-4 lg:text-4xl dark:text-nord6">
+        <h1 className="mb-8 text-3xl font-bold text-center sm:text-4xl dark:text-nord6">
           Crypto Wallets
         </h1>
         <div className="grid w-2/3 mx-auto place-items-center sm:w-full">
           <div className="relative invisible sm:visible">
-            <p className="mb-6 text-center lg:text-xl dark:text-nord5">
+            <p className="mb-6 text-center sm:text-xl ">
               BlockVault provides support for some commonly use crypto wallets
               for authentication
             </p>
             <section className="relative">
               <div className="grid grid-cols-2 gap-14">
                 <div className="border-2 border-#DFDFDF rounded-xl p-12 h-96 text-left relative hover:-translate-y-2 duration-300 hover:shadow bg-nord5 dark:bg-nord3 dark:border-nord3">
-                  <h1 className="inline-block mb-6 mr-2 font-bold lg:text-2xl dark:text-nord6">
+                  <h1 className="inline-block mb-6 mr-2 font-bold sm:text-2xl">
                     Metamask
                   </h1>
                   <img
@@ -82,7 +82,7 @@ export default function Wallet() {
                   </div>
                 </div>
                 <div className="relative p-12 text-left duration-300 border-2 rounded-xl h-96 hover:-translate-y-2 hover:shadow bg-nord5 dark:bg-nord3 dark:border-nord3">
-                  <h1 className="inline-block mb-6 mr-2 font-bold lg:text-2xl dark:text-nord6">
+                  <h1 className="inline-block mb-6 mr-2 font-bold sm:text-2xl dark:text-nord6">
                     Phantom
                   </h1>
                   <img
