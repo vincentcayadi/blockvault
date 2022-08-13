@@ -80,10 +80,10 @@ export default function Dashboard() {
         <div className="w-1/5 ">
           <div className="w-1/2 h-screen mx-auto my-8">
             <div className="px-2 py-4 bg-white border-white border-solid rounded-md drop-shadow-xl">
-              <p className="pb-1 text-3xl font-bold sm:text-xl">907</p>
-              <p className="text-base font-light sm:text-xs">Files</p>
+              <p className="pb-1 text-xl font-bold sm:text-3xl">907</p>
+              <p className="text-xs font-light sm:text-base">Files</p>
             </div>
-            <div className="grid w-full grid-cols-2 gap-4 mt-12 text-center sm:grid-cols-1 justify-items-center">
+            <div className="grid w-full grid-cols-1 gap-4 mt-12 text-center sm:grid-cols-2 justify-items-center">
               <Link exact to="/dashboard">
                 <div className="grid w-12 h-12 p-2 mx-auto duration-200 border rounded-md drop-shadow-lg bg-nord6 place-items-center hover:scale-125">
                   <IconContext.Provider value={{ size: '1.2rem' }}>
@@ -121,14 +121,14 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="z-0 w-full h-full ">
-          <div className="p-2 my-4">
+          {/*<div className="p-2 my-4">
             <p className="mx-4 my-2 text-lg font-semibold text-left text-nord1">
               Folders
             </p>
             <div className="flex items-center justify-center w-full h-40 text-2xl font-bold text-center rounded-md text-nord5 bg-nord3">
               Coming Soon
             </div>
-            {/* <div className="grid grid-cols-4 drop-shadow-lg">
+             <div className="grid grid-cols-4 drop-shadow-lg">
               <div className="w-auto mx-8 bg-white rounded-md h-36 color">
                 <div className="w-6 h-6 bg-blue-300 rounded-full mt-7 ml-7"></div>
                 <div className="w-full py-4 text-left px-7 text-nord1">
@@ -169,10 +169,10 @@ export default function Dashboard() {
                   <div className="pb-4 text-sm px-7 text-nord1">12 GB</div>
                 </div>
               </div>
-            </div> */}
-          </div>
+            </div> 
+          </div>*/}
 
-          <p className="mx-4 my-2 text-lg font-semibold text-left text-nord1">
+          <p className="mx-4 my-2 text-2xl font-semibold text-left underline text-nord1">
             Files
           </p>
           <div className="grid grid-flow-row grid-cols-4 grid-rows-3 drop-shadow-lg">

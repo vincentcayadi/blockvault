@@ -315,7 +315,7 @@ const Upload = (props) => {
   }
 
   return props.trigger ? (
-    <div className="fixed top-0 left-0 z-10 flex items-center justify-center w-full h-screen backdrop-blur-sm bg-nord4/50">
+    <div className="fixed top-0 left-0 z-10 flex items-center justify-center w-full h-screen font-manrope backdrop-blur-sm bg-nord4/50">
       <div className="relative w-full max-w-2xl rounded-md bg-nord6 drop-shadow-lg">
         <AiFillCloseCircle
           className="absolute top-0 right-0 w-6 h-6 m-4 cursor-pointer text-nord1"
@@ -350,7 +350,7 @@ const Upload = (props) => {
               type="button"
               id="upload_file_button"
               onClick={upload}
-              className="content-center w-1/2 p-2 mx-auto mb-8 duration-300 rounded-md shadow-md bg-nord4 hover:shadow-xl text-nord1"
+              className="content-center w-1/2 p-2 mx-auto mb-8 duration-300 border-2 rounded-md shadow-md text-semibold bg-nord4 text-nord border-nord4 sm:hover:bg-white"
             >
               Upload
             </button>
