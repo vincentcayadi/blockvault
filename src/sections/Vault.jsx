@@ -13,13 +13,13 @@ export default function Vault() {
         <div className="flex flex-col-reverse items-center gap-12 sm:flex-row">
           <div></div>
           <div className="flex flex-col items-center flex-1 lg:items-start">
-            <h1 className="mb-6 text-3xl font-extrabold text-center md:text-4 lg:text-5xl lg:text-left dark:text-nord6">
+            <h1 className="mb-6 text-3xl font-extrabold text-center align-middle sm:text-left sm:text-5xl dark:text-nord6">
               BlockVault
             </h1>
-            <h1 className="mb-6 text-3xl font-extrabold text-center md:text-4 lg:text-5xl lg:text-left dark:text-nord6">
+            <h1 className="mb-6 text-3xl font-extrabold text-center align-middle sm:text-left sm:text-5xl dark:text-nord6">
               Keep your data
             </h1>
-            <span className="mb-8 text-3xl font-extrabold text-center font-mr md:text-4 lg:text-5xl lg:text-left dark:text-nord6">
+            <span className="mb-8 text-3xl font-extrabold text-center align-middle sm:text-left font-mr sm:text-5xl dark:text-nord6">
               <Typical /*https://dev.to/davidamunga/how-to-create-a-text-typing-animation-effect-in-react-49gl */
                 steps={[
                   ' ',
