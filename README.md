@@ -1,2 +1,2 @@
 # blockvault
-moved to blockvault org
+Forked to [blockvault organisation](https://github.com/blockvaultdapp/blockvault)
